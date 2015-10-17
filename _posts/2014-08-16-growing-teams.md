@@ -30,7 +30,7 @@ One aspect I wanted to elaborate on is growing knowledge. Working at a startup m
 
 A great solution to this is by the use of [MOOCs](https://en.wikipedia.org/wiki/Massive_open_online_course) (massively open online courses). We are lucky to be in a time where there is free access to very useful courses. Specifically I found that Udacity was one of the very best ways to allow team members to gain knowledge they needed to suceed.
 
-For example when our highschool summer student, [Kevin Peng](http://www.linkedin.com/pub/kevin-peng/9b/7b3/346), joined the team, he never used `git` or version control before. Instead of having to spend time on reading boring documentation or a [book on git](https://git-scm.com/book/en/v2), he made his own version of 2048 in a couple of hours by taking [Udacity’s course](https://www.udacity.com/course/ud248). This fun iterative approach allowed him to have a great summer co-op experience and enabled to complete a technically difficult project.
+For example when our highschool summer student, [Kevin Peng](http://www.linkedin.com/pub/kevin-peng/9b/7b3/346), joined the team, he never used `git` or version control before. Instead of having to spend time on reading boring documentation or a [book on git](https://git-scm.com/book/en/v2), he made his own version of 2048 in a couple of hours by taking [Udacity’s course](https://www.udacity.com/course/ud248). This fun iterative approach allowed him to have a great summer co-op experience and enabled to complete a [technically difficult project](https://github.com/kevinpeng7/Data-Dumper).
 
 # Eating your own dogfood
 
