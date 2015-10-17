@@ -8,7 +8,7 @@ tags: [Leadership, Udacity, Start-ups, eCo-op, Productivity]
 last_updated: 2015-10-17
 ---
 
-This is a cross-post of a blog post originally written for CBET's [Leadership Blog](https://uwaterloo.ca/conrad-business-entrepreneurship-technology/blog/post/scaling-your-startup-team-and-knowledge) using my [enterprise co-op term](https://uwaterloo.ca/conrad-business-entrepreneurship-technology/undergraduate-students/enterprise-co-op) (intern at my own company) in the summer of 2014.  The blog post was also featured on LinkedIn's [Leadership and Management Pulse](https://www.linkedin.com/pulse/20140816182325-143036205-growing-and-scaling-high-performance-teams?trk=prof-post)  
+This is a cross-post of a blog post originally written for CBET's [Leadership Blog](https://uwaterloo.ca/conrad-business-entrepreneurship-technology/blog/post/scaling-your-startup-team-and-knowledge) during my [enterprise co-op term](https://uwaterloo.ca/conrad-business-entrepreneurship-technology/undergraduate-students/enterprise-co-op) (intern at my own company) in the summer of 2014.  The blog post was also featured on LinkedIn's [Leadership and Management Pulse](https://www.linkedin.com/pulse/20140816182325-143036205-growing-and-scaling-high-performance-teams?trk=prof-post)  
 
 When I started [PetroPredict](http://petropredict.com) with Dominic, we were just a team of two co-founders looking to use technologies we used in tech companies and Silicon Valley to optimize decision making in the oil and gas industry. Since then we added on 4 others, effectively tripling our team. Over the past couple of months we were able to run a high performance team enabling our company to grow and scale.
 
