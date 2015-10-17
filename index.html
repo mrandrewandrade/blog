@@ -85,16 +85,23 @@ title: Andrew Andrade's Blog
 				{% include JB/fp_categories_list %}
 			</ul>
 		</div>
-		<div>
-			<h2>Recent Posts</h2>
-			<ul>
-			{% for post in site.posts limit:5 %}
-			<li>
-				<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
-				{{ post.excerpt | strip_html }}
-			</li>
-			{% endfor %}
-			</ul>
-		</div>
-	</div>
+        <div class="tags">
+            <h2>Article Tags</h2>
+            <ul class="tag_box">
+                {% assign tags_list = site.tags %}
+                {% include JB/fp_tags_list %}
+            </ul>
+        </div>
+        <div>
+            <h2>Recent Posts</h2>
+            <ul>
+                {% for post in site.posts limit:5 %}
+                <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
+                {{ post.excerpt | strip_html }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
 </div>
