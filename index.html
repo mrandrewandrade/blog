@@ -90,7 +90,7 @@ title: Andrew Andrade's Blog
 			<ul>
 			{% for post in site.posts limit:5 %}
 			<li>
-				<a href="{{ post.url }}">{{ post.title}}</a>
+				<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
 				{{ post.excerpt | strip_html }}
 			</li>
 			{% endfor %}
