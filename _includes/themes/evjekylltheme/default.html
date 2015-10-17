@@ -59,71 +59,71 @@
 			<div class="navbar-inner">
 				<div class="container">
 					<a class="brand" href="{{ HOME_PATH }}">{{ site.title }}</a>
-                    <a href="http://mrandrewandrade.com">Home</a>
 					<ul class="nav navbar-nav">
-						{% assign pages_list = site.pages %}
-						{% assign group = 'navigation' %}
-						{% include JB/pages_list %}
-					</ul>
-					<form id="search-form" class="navbar-form navbar-right pull-right has-success visible-lg" role="search">
-						<div class="form-group">
-						<input type="text" class="form-control input-sm" placeholder="Search" id="query">
-						</div>
-					</form>
-					<div class="nav-icon">
-						<a href="/blog/rss.xml"><i class="fa fa-rss fa-2x"></i></a>
-					</div>
-				</div>
-			</div>
-    </div>
+                        {% assign pages_list = site.pages %}
+                        {% assign group = 'navigation' %}
+                        {% include JB/pages_list %}
+                        <a href="http://mrandrewandrade.com">Home</a>
+                    </ul>
+                    <form id="search-form" class="navbar-form navbar-right pull-right has-success visible-lg" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control input-sm" placeholder="Search" id="query">
+                        </div>
+                    </form>
+                    <div class="nav-icon">
+                        <a href="/blog/rss.xml"><i class="fa fa-rss fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <div class="container">
-			<div class="row">
-				<div class="row-fliud">
-					<div class="span12">
-						<div class="searchresult">
-						</div>
-						<div id="search-loader" class="img-wrap">
-							<img src="{{ ASSET_PATH }}/loading.gif">
-						</div>
-					</div>
-				</div>
-				{{ content }}
-			</div>
-			<hr>
-			<footer>
+        <div class="container">
+            <div class="row">
+                <div class="row-fliud">
+                    <div class="span12">
+                        <div class="searchresult">
+                        </div>
+                        <div id="search-loader" class="img-wrap">
+                            <img src="{{ ASSET_PATH }}/loading.gif">
+                        </div>
+                    </div>
+                </div>
+                {{ content }}
+            </div>
+            <hr>
+            <footer>
                 &copy; {{ site.time | date: '%Y' }} Website created by <a href="http://mrandrewandrade.com" target="_blank">Andrew Andrade</a>, powered by <a href="http://jekyllrb.com" target="_blank" title="The simple, blog-aware, static site generator.">Jekyll</a> and hosted for free on <a href="http://github.com/mrandrewandrade/blog" target="_blank" title="Andrew Andrade's GitHub Profile">GitHub</a>.
-				<br><br>
-			</footer>
-		</div>
+                <br><br>
+            </footer>
+        </div>
 
-    {% include JB/analytics %}
-  </body>
-	<script type="text/javascript">
-		window.___gcfg = {lang: 'zh-CN'};
-		(function() {
-			var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-			po.src = 'https://apis.google.com/js/platform.js';
-			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-	</script>
-	<script>
-		$(document).ready(function() {
-			$("p img").each(function(){
-				var strA = "<a class='fancybox' rel='gallery' href='" + this.src + "'></a>";
-				$(this).wrapAll(strA);
-			});
-			$(".fancybox").fancybox({
-				padding: 0,
-				beforeShow: function(){
-					var alt = this.element.find('img').attr('alt');
-					this.inner.find('img').attr('alt', alt);
-					this.title = alt;
-				}
-			});
-			$(".navbar-fixed-top").autoHidingNavbar({
-				'animationDuration': 300
-			});
-		});
-	</script>
-</html>
+        {% include JB/analytics %}
+        </body>
+        <script type="text/javascript">
+window.___gcfg = {lang: 'zh-CN'};
+(function() {
+ var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+ po.src = 'https://apis.google.com/js/platform.js';
+ var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+ })();
+        </script>
+        <script>
+$(document).ready(function() {
+        $("p img").each(function(){
+            var strA = "<a class='fancybox' rel='gallery' href='" + this.src + "'></a>";
+            $(this).wrapAll(strA);
+            });
+        $(".fancybox").fancybox({
+padding: 0,
+beforeShow: function(){
+var alt = this.element.find('img').attr('alt');
+this.inner.find('img').attr('alt', alt);
+this.title = alt;
+}
+});
+        $(".navbar-fixed-top").autoHidingNavbar({
+            'animationDuration': 300
+            });
+        });
+        </script>
+        </html>
