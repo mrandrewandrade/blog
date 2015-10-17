@@ -19,7 +19,10 @@ TODO:
 - remove discus
 - add CV site 
 - add about me on front page
-
+Fix:
+- Search
+- Quotes
+- Categories on front page
 
 
 
