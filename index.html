@@ -7,7 +7,7 @@ title: Andrew Andrade's Blog
 	<div class="span8">
 		{% for post in paginator.posts %}
 					{% capture summary %}{{post.content | split:'<!--more-->' |first }}{% endcapture%}
-					<h1><a class="title" href="mrandrewandrade.github.io/blog{{ post.url }}">{{ post.title }}</a></h1>
+					<h1><a class="title" href="http://mrandrewandrade.github.io/blog/">{{ post.title }}</a></h1>
 					<div class="post_at_index">
 							{{summary}} 
 					{% if summary != post.content %}<a href="{{ BASE_PATH }}{{ post.url }}" rel="nofollow">Read more...</a>{% endif %}
