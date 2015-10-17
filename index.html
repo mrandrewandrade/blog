@@ -77,42 +77,35 @@ title: mrandrewandrade.com/blog
 			</ul>
 		</div>
 	</div>
-<div class="span4">
-            <div class="container">
-                <h2>Welcome to Andrew's Blog!</h2>
-                    <div class="panel-body">
-                        <img src="http://cv.mrandrewandrade.com/img/aa.png" alt="Andrew Andrade" class="img-thumpnail" width="200" height="200">
-                    </div>
-                    <a href="http://mrandrewandrade.com/" rel="author" class="u-url p-name text-center">Andrew Andrade</a>
-                    </figcaption>
-                </div>
-            </div>
-
-
-            <div class="categories">
-                <h2>Article Categories</h2>
-                <ul class="tag_box">
-                    {% assign categories_list = site.categories %}
-                    {% include JB/fp_categories_list %}
-                </ul>
-            </div>
-            <div class="tags">
-                <h2>Article Tags</h2>
-                <ul class="tag_box">
-                    {% assign tags_list = site.tags %}
-                    {% include JB/fp_tags_list %}
-                </ul>
-            </div>
-            <div>
-                <h2>Recent Posts</h2>
-                <ul>
-                    {% for post in site.posts limit:5 %}
-                    <li>
-                    <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
-                    {{ post.excerpt | strip_html }}
-                    </li>
-                    {% endfor %}
-                </ul>
-            </div>
+    <div class="span4">
+        <div class="container">
+            <h2>Welcome to Andrew's Blog!</h2>
+            <img src="http://cv.mrandrewandrade.com/img/aa.png" alt="Andrew Andrade" class="img-thumpnail" width="200" height="200">
+        </div>
+        <div class="categories">
+            <h2>Article Categories</h2>
+            <ul class="tag_box">
+                {% assign categories_list = site.categories %}
+                {% include JB/fp_categories_list %}
+            </ul>
+        </div>
+        <div class="tags">
+            <h2>Article Tags</h2>
+            <ul class="tag_box">
+                {% assign tags_list = site.tags %}
+                {% include JB/fp_tags_list %}
+            </ul>
+        </div>
+        <div>
+            <h2>Recent Posts</h2>
+            <ul>
+                {% for post in site.posts limit:5 %}
+                <li>
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title}}</a>
+                {{ post.excerpt | strip_html }}
+                </li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
+</div>
