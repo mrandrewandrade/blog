@@ -3,8 +3,8 @@ layout: post
 title: "How I won $5000 at a Facebook hackathon without a single line of code"
 tagline: "OCP Hackathon Winner: The Codeless Hack"
 description: "OCP Hackathon Winner: The Codeless Hack"
-category: [hardware] 
-tags: [arduino, battery, open compute, hardware, Facebook, opencompte.org, openhardware]
+category: [hardware, cross-posts] 
+tags: [pcb-design, battery, debug, open compute, hardware, Facebook, opencompute.org, openhardware]
 last_updated: 2015-21-11
 ---
 
