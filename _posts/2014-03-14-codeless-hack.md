@@ -10,7 +10,7 @@ last_updated: 2015-21-11
 
 _This a cross post from the_ [_Open Compute Project_](http://www.opencompute.org/) [_official blog_](http://www.opencompute.org/blog/ocp-hackathon-winner-the-codeless-hack/)      
 
-_Our second blog post about the OCP Summit's hardware hackathon comes from Derek Jouppi_and_ [_Andrew Andrade_](http://ca.linkedin.com/pub/andrew-andrade/3b/a9b/6b9) _who are interns at Facebook and won the OCP Summit Hackathon with a new design for the [Open Rack](http://www.opencompute.org/wiki/Open_Rack) V2's Battery Backup Unit._    
+_Our second blog post about the OCP Summit's hardware hackathon comes from Derek Jouppi and_ [_Andrew Andrade_](http://ca.linkedin.com/pub/andrew-andrade/3b/a9b/6b9) _who are interns at Facebook and won the OCP Summit Hackathon with a new design for the [Open Rack](http://www.opencompute.org/wiki/Open_Rack) V2's Battery Backup Unit._    
 
 Derek and I decided to take part in the hardware hackathon at the Open Compute Summit on a whim. We'd heard about the hackathon and were intrigued enough to stop by, but didn't plan on joining in. Once we were there, however, we realized that the opportunity was too much to pass up, and we jumped in without the team size and equipment that many other groups had.     
 
@@ -20,7 +20,7 @@ The problem with the BBU is that if it is not functional, debugging a failed uni
 
 Thanks to one of the hackathon's organizers, John Kenevey, we were able to run back to Menlo Park to grab the supplies we needed: two Arduinos, bread breadboards, LED's, wires, DMM, and an assortment of other parts we thought might be useful.      
 
-![](preparing-to-win-hackathon.png)  
+![](mrandrewandrade.com/blog/images/preparing-to-win-hackathon.png)  
 **Derek Jouppi and I begin to assemble the equipment we need for our hack.**   
 
 Then we got to work. Since the display BBU's were inaccessible, I quickly began to write Arduino code to simulate a failing BBU. I also wrote some code that acted as a DAC to take in the signals from the BBU. Meanwhile, Derek got to work doing a pin out drawing and sketching the initial schematic. We worked for a few hours before bringing our design to an Open Rack prototype to investigate how we could implement it. That's when we realized our solution was all wrong.    
