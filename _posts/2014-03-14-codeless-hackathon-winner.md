@@ -14,7 +14,9 @@ _Our second blog post about the OCP Summit's hardware hackathon comes from Derek
 
 Derek and I decided to take part in the hardware hackathon at the Open Compute Summit on a whim. We'd heard about the hackathon and were intrigued enough to stop by, but didn't plan on joining in. Once we were there, however, we realized that the opportunity was too much to pass up, and we jumped in without the team size and equipment that many other groups had.     
 
-What we did have was an idea. We wanted to build something that was highly impactful, that could be contributed immediately to Open Compute, and that we hoped would be a shippable prototype within 24 hours. Given our criteria, we decided we wanted to do a hack for the newly released Battery Backup Unit (BBU) on the Open Rack V2 design, since this is the area that Derek was most familiar with.     
+> We didn't have a year with years of experience.  We have something better: an idea.
+
+We wanted to build something that was highly impactful, that could be contributed immediately to Open Compute, and that we hoped would be a shippable prototype within 24 hours. Given our criteria, we decided we wanted to do a hack for the newly released Battery Backup Unit (BBU) on the Open Rack V2 design, since this is the area that Derek was most familiar with.     
 
 The problem with the BBU is that if it is not functional, debugging a failed unit is extremely difficult and time consuming. You have to use a nest of wires, probes, DMM, and/or oscilloscope to find the solution – and it's definitely not a great solution. Instead, we envisioned a coupler that would take in the output from the scope, process the signals and intelligently display what the error was. Using a simple ATMEGA microcontroller, and LED display and a few other components, we could make a compact and intelligent tool for technicians working in data centers. It was simple enough we could design and build a working prototype in only 24 hours, and yet it had high impact as it could directly contribute to running a better data center. It seemed like a perfect project for our two-man team.      
 
@@ -32,6 +34,7 @@ With only a few hours left in the hackathon, we decided we needed to pivot to si
 We realized that, given the mapping of the pin outs, one solution would be to connect the signals to the status LED's, which would give instant visualization to the problems with the BBU. While it would take manual diagnostics to determine issues, the cost of the device would be significantly lower, and it would be much easier to operate. For added functionality we included an output header. This could be used in the future to connect to a microcontroller if a more automated method had to be deployed. Finally, since the BBU relied on a power supply to charge, we included a power header that could be used to connect to the power supply.    
 
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rrX7r5jM19A" frameborder="0" allowfullscreen></iframe>
 **The debug card that resulted from our hack could easily attach as a component to the back of a Battery Backup Unit as shown is this quickly rendered animation**   
 
 Our hack had become a codeless debug tool that would enable techs to quickly and efficiently debug issues with battery back up units in their datacenters.    
@@ -39,15 +42,17 @@ Our hack had become a codeless debug tool that would enable techs to quickly and
 After drafting out a quick design on paper, we quickly iterated our design on breadboards attempting to gain the designed functionality. We borrowed an actual failing BBU from the demo and after some iteration, we were able to come up with a very simple, "bare bones" design for the debug card.    
 
 
-<iframe title="hackathon" width="800" height="600" scrolling="no" frameborder="0" name="hackathon" class="eda_tool" src="https://upverter.com/eda/embed/#designId=67c971c45790061b,actionId="></iframe>
+<iframe title="hackathon" width="600" height="500" scrolling="no" frameborder="0" name="hackathon" class="eda_tool" src="https://upverter.com/eda/embed/#designId=67c971c45790061b,actionId="></iframe>
 **Schematic of the debug card we made using Upverter's schematic layout tool.**
 
 For our circuit layout we used Upverter, a start-up that focuses on online board design CAD software. We drew up a quick schematic by sourcing our components online and imported their drawings on Upverter's schematic tool. We then used the tool to create a bill of materials that included the component prices and the cost to spin the board.
 
-We then created a PCB layout for the board. To parallelize our efforts, we performed a quick mock-up on MS Paint of the layout of the board. Derek finished up the PCB layout on Upverter while I did a quick rending of our final product using mechanical CAD software.
+We then created a PCB layout for the board. To parallelize our efforts, we performed a quick mock-up on MS Paint of the layout of the board. Derek finished up the PCB layout on Upverter while I did a quick rending of our final product using mechanical CAD software as shown below.
+
 
 When we demonstrated our project for the judges, we were proud to watch as the BBU powered up and our LED's lit up a split second later, indicating the status of the unit. Our simple solution had made it easy and inexpensive to know if the BBU was functional at any given time. This vital information will make it easier to be sure that any power loss won't result in a loss of functionality.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KAKc50apXxI" frameborder="0" allowfullscreen></iframe>
 
 We were incredibly excited by what we'd built, and we couldn't help but note the community spirit of Open Compute that had gotten us there. Throughout the hack, we frequently traded tools with other teams and asked other participants for their input as we worked. Everyone lived and breathed the open source philosophy – that sharing knowledge and experience will result in better hacks overall. It seems to us that this desire to collaborate is what Open Compute is all about, and in that vein, we plan to release the specifications for our BBU hack to the open source community in the next few weeks.
 
