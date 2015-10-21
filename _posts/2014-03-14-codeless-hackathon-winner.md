@@ -14,7 +14,7 @@ _Our second blog post about the OCP Summit's hardware hackathon comes from Derek
 
 Derek and I decided to take part in the hardware hackathon at the Open Compute Summit on a whim. We'd heard about the hackathon and were intrigued enough to stop by, but didn't plan on joining in. Once we were there, however, we realized that the opportunity was too much to pass up, and we jumped in without the team size and equipment that many other groups had.     
 
-> We didn't have a year with years of experience.  We have something better: an idea.
+> We didn't come with a team, or had years of experience.  We have something better: an idea and killer execution.
 
 We wanted to build something that was highly impactful, that could be contributed immediately to Open Compute, and that we hoped would be a shippable prototype within 24 hours. Given our criteria, we decided we wanted to do a hack for the newly released Battery Backup Unit (BBU) on the Open Rack V2 design, since this is the area that Derek was most familiar with.     
 
