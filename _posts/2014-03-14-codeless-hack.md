@@ -20,7 +20,7 @@ The problem with the BBU is that if it is not functional, debugging a failed uni
 
 Thanks to one of the hackathon's organizers, John Kenevey, we were able to run back to Menlo Park to grab the supplies we needed: two Arduinos, bread breadboards, LED's, wires, DMM, and an assortment of other parts we thought might be useful.      
 
-![](mrandrewandrade.com/blog/images/preparing-to-win-hackathon.png)  
+![](http://mrandrewandrade.com/blog/images/preparing-to-win-hackathon.jpg)  
 **Derek Jouppi and I begin to assemble the equipment we need for our hack.**   
 
 Then we got to work. Since the display BBU's were inaccessible, I quickly began to write Arduino code to simulate a failing BBU. I also wrote some code that acted as a DAC to take in the signals from the BBU. Meanwhile, Derek got to work doing a pin out drawing and sketching the initial schematic. We worked for a few hours before bringing our design to an Open Rack prototype to investigate how we could implement it. That's when we realized our solution was all wrong.    
@@ -32,14 +32,14 @@ With only a few hours left in the hackathon, we decided we needed to pivot to si
 We realized that, given the mapping of the pin outs, one solution would be to connect the signals to the status LED's, which would give instant visualization to the problems with the BBU. While it would take manual diagnostics to determine issues, the cost of the device would be significantly lower, and it would be much easier to operate. For added functionality we included an output header. This could be used in the future to connect to a microcontroller if a more automated method had to be deployed. Finally, since the BBU relied on a power supply to charge, we included a power header that could be used to connect to the power supply.    
 
 
-**The debug card that resulted from our hack could easily attach as a component to the back of a Battery Backup Unit as shown is this rendering and** [**video**](https://www.facebook.com/photo.php?v=10153813042370623&set=vb.520255622&type=3&theater) **.**   
+**The debug card that resulted from our hack could easily attach as a component to the back of a Battery Backup Unit as shown is this quickly rendered animation**   
 
-Our hack had become a codeless debug tool that would enable techs to quickly and efficiently debug issues with battery back up units in their datacenters.
+Our hack had become a codeless debug tool that would enable techs to quickly and efficiently debug issues with battery back up units in their datacenters.    
 
-After drafting out a quick design on paper, we quickly iterated our design on breadboards attempting to gain the designed functionality. We borrowed an actual failing BBU from the demo and after some iteration, we were able to come up with a very simple, "bare bones" design for the debug card.
+After drafting out a quick design on paper, we quickly iterated our design on breadboards attempting to gain the designed functionality. We borrowed an actual failing BBU from the demo and after some iteration, we were able to come up with a very simple, "bare bones" design for the debug card.    
 
 
-
+<iframe title="hackathon" width="800" height="600" scrolling="no" frameborder="0" name="hackathon" class="eda_tool" src="https://upverter.com/eda/embed/#designId=67c971c45790061b,actionId="></iframe>
 **Schematic of the debug card we made using Upverter's schematic layout tool.**
 
 For our circuit layout we used Upverter, a start-up that focuses on online board design CAD software. We drew up a quick schematic by sourcing our components online and imported their drawings on Upverter's schematic tool. We then used the tool to create a bill of materials that included the component prices and the cost to spin the board.
