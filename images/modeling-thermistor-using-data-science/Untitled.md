@@ -1,13 +1,7 @@
----
-layout: post
-title: "Modeling a Thermister: Merging Hardware Engineering and Data Science"
-tagline: "Curve fitting, residuals and fun math!"
-category: [FYDP, hardware, data science] 
-tags: [FTDP, engineering, hardware, electrical, battery, thermal, data science, curve fitting, python, residuals]
-last_updated: 2015-10-17
----
 
-In the [last blog post](http://mrandrewandrade.com/blog/2015/10/21/battery-testing.html), I talked about voltage dividers and how they can be used to limit voltage to eventually connect to an ADC to measure voltage on a BeagleBone.  Today I am going to build on the voltage divider and pair hardware engineering with data science.  The next couple of posts will be pieces of battery testing rig, and then I will put it all togeather to explain how the full system works. First things first, what temperature sensor should we use?
+# Modeling a Thermister: Hardware Engineering and Data Science
+
+In the last blog post, I talked about voltage dividers and how they can be used to limit voltage to eventually connect to an ADC to measure voltage on a beaglebone.  Today I am going to build on the voltage divider and pair hardware engineering with data science.  The next couple of posts will be pieces of battery testing rig, and then I will put it all togeather to explain how the full system works. First things first, what temperature sensor should we use?
 
 ## Selecting a Thermal Sensor
 
@@ -40,7 +34,7 @@ Once you own the file in a speadsheet program or in your text editor of choice, 
 That is all great, but our goal is to use a micocontroller (or computer) to store, measure and use the temperature readings.  This means we have to mathematically model how the thermister behaves. Since we have data provided from the manufacturer, we do this by plotting the data which was provided:
 
 
-{% highlight python %}
+```python
 #import necessary libraries:
 import pandas as pd
 import numpy as np
@@ -64,14 +58,23 @@ plt.plot(data.temperature,data.r_norm, label='average resistance')
 plt.xlabel("Temperature (Celcius)")
 plt.ylabel("Resistance (kohm)")
 plt.title("Expected Resistance vs Temperature of 100K Thermistor")
-{% endhighlight %}
+```
+
+
+
+
+    <matplotlib.text.Text at 0x7f8e695bd710>
+
+
+
 
 ![png](output_1_1.png)
+
 
 Now we can see that it does not have a linear relation.  Actually it has a inverse relation or an $$x^{n}$$ where $n<0$ most probably.  Since I am curious, I plotted the min and the max resistance to get a better feel for the error in the temperature reading. My ituition tells me that that is th range the thermister operates in.
 
 
-{% highlight python %}
+```python
 plt.plot(data.temperature,data.r_norm, label='expected resistance')
 plt.plot(data.temperature,data.r_min, label='min resistance')
 plt.plot(data.temperature,data.r_max, label='max resistance')
@@ -80,7 +83,14 @@ plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
 plt.xlabel("Temperature (Celcius)")
 plt.ylabel("Resistance (kohm)")
 plt.title("Resistance vs Temperature of 100K Thermistor")
-{% endhighlight %}
+```
+
+
+
+
+    <matplotlib.text.Text at 0x7f8e6940be10>
+
+
 
 
 ![png](output_3_1.png)
@@ -89,7 +99,7 @@ plt.title("Resistance vs Temperature of 100K Thermistor")
 Now, the top graph, isn't that useful.  All it shows is that the range is very small, and is wider (there is more error) when temperatures are below 0 degrees.  To see if we can do better, lets limit the range (with contingency) of the temperatures we will be dealing with on the project: 0-100 degrees.
 
 
-{% highlight python %}
+```python
 plt.plot(data.temperature[30:130],data.r_norm[30:130], label='expected resistance')
 plt.plot(data.temperature[30:130],data.r_min[30:130], label='min resistance')
 plt.plot(data.temperature[30:130],data.r_max[30:130], label='max resistance')
@@ -98,7 +108,15 @@ plt.ylabel("Resistance (kohm)")
 plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
            ncol=2, mode="expand", borderaxespad=0.)
 
-{% endhighlight %}
+```
+
+
+
+
+    <matplotlib.legend.Legend at 0x7f8e8c9cdd90>
+
+
+
 
 ![png](output_5_1.png)
 
@@ -106,7 +124,7 @@ plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
 The plot is a bit clearer but not perfect, let's try and be more fancy and reprensent the error with error bars like they do in stats 101.
 
 
-{% highlight python %}
+```python
 data['lower_error'] = data.r_norm-data.r_min
 data['upper_error'] = data.r_max-data.r_norm
 
@@ -117,7 +135,14 @@ plt.xlabel("Temperature (Celcius)")
 plt.ylabel("Resistance (kohm)")
 #plt.show()
 
-{% endhighlight %}
+```
+
+
+
+
+    <matplotlib.text.Text at 0x7f8e692bf650>
+
+
 
 
 ![png](output_7_1.png)
@@ -127,7 +152,7 @@ Great!  A bit better, but it is still hard to read.  Let's try plotting the erro
 
 
 
-{% highlight python %}
+```python
 plt.plot(data.temperature[30:130],data.r_min[30:130]-data.r_norm[30:130], label='lower error')
 plt.plot(data.temperature[30:130],data.r_max[30:130]-data.r_norm[30:130], label='upper error')
 plt.plot(data.temperature[30:130],data.r_norm[30:130], label='expected resistance')
@@ -135,7 +160,12 @@ plt.xlabel("Temperature (Celcius)")
 plt.ylabel("Resistance (kohm)")
 plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
            ncol=2, mode="expand", borderaxespad=0.)
-{% endhighlight %}
+```
+
+
+
+
+    <matplotlib.legend.Legend at 0x7f8e6913ab90>
 
 
 
@@ -143,17 +173,28 @@ plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
 ![png](output_9_1.png)
 
 
-From this figure it is quite clear as tempertature decreases, there is more error in the thermistor reading.  This figure also shows that reading taken over 20 C should have good accuracy.  We can even take this futher by one more plot
+
+```python
+
+```
+
+From thjis figure it is quite clear as tempertature decreases, there is more error in the thermistor reading.  This figure also shows that reading taken over 20 C should have good accuracy.  We can even take this futher by one more plot
 
 
-{% highlight python %}
+```python
 plt.plot(data.temperature[50:130],data.r_min[50:130]-data.r_norm[50:130], label='lower error')
 plt.plot(data.temperature[50:130],data.r_max[50:130]-data.r_norm[50:130], label='upper error')
 plt.xlabel("Temperature (Celcius)")
 plt.ylabel("Resistance (kohm)")
 plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
            ncol=2, mode="expand", borderaxespad=0.)
-{% endhighlight %}
+```
+
+
+
+
+    <matplotlib.legend.Legend at 0x7f8e690973d0>
+
 
 
 
@@ -163,7 +204,7 @@ plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
 This figure shows the upper and lower bound of error (to be around $$\pm 1.5k\Omega$$)+ 125 kohm, since the expected reading would be around $$125kOmega$$ at 20 degrees C.  Knowing the smallest resistance within our operating range will occur at 100 degrees (around $$6720\Omega$$), $$R_1 can be calculated to be around $$1200\Omega$$ using the voltage divider presented in the previous post.  Now, the largest possible error can be calculated and used as a very conservative estime of the temperature reading resolution.  Before we do that, let us fit a curve to the data.  Using grade 11 math, we can estimate that the function which discribes the invest curve would look something like $$resistance = a \times e^{-b \times temprature} + c$$.  We can then use SciPy's [curve_fit](http://docs.scipy.org/doc/scipy-0.16.0/reference/generated/scipy.optimize.curve_fit.html) to determine the fit parameters and the covarience matrix.
 
 
-{% highlight python %}
+```python
 def fitness_function(t, a, b, c):
     return a*np.exp(-b*t) + c
 full_temp_fit_parms, full_temp_fit_covariances = curve_fit(fitness_function,
@@ -172,7 +213,7 @@ print ' full temperature fit coefficients:\n', full_temp_fit_parms
 print ' Covariance matrix:\n', full_temp_fit_covariances
 
 
-{% endhighlight %}
+```
 
      full temperature fit coefficients:
     [  3.22248984e+02   5.51886907e-02   4.56056442e+00]
@@ -188,7 +229,7 @@ $$resistance = 322 \times e^{-0.055 \times temprature} + 4.56$$
 We can also determine the standard deviation of the fit from the diagonal of the covariance matrix, and plot it for each parameter.
 
 
-{% highlight python %}
+```python
 # standard deviation of each paramter
 sigma = [math.sqrt(full_temp_fit_covariances[0,0]), 
          math.sqrt(full_temp_fit_covariances[1,1]), 
@@ -210,7 +251,14 @@ plt.plot(x2,mlab.normpdf(x2,full_temp_fit_parms[2],sigma[2]), label='uncertainty
 
 #plt.show()
 
-{% endhighlight %}
+```
+
+
+
+
+    [<matplotlib.lines.Line2D at 0x7f8e68e68a90>]
+
+
 
 
 ![png](output_16_1.png)
@@ -227,7 +275,7 @@ plt.plot(x2,mlab.normpdf(x2,full_temp_fit_parms[2],sigma[2]), label='uncertainty
 As we can see, the standard deviation is very small and thus results in a good fit accross the full range of temperature as shown in the three figures below:
 
 
-{% highlight python %}
+```python
 full_temp_fit = fitness_function(data.temperature,
                                  full_temp_fit_parms[0],
                                  full_temp_fit_parms[1],
@@ -256,7 +304,12 @@ plt.xlabel("Error in Curve fit (kohm)")
 plt.title("Residual Distribution")
 
 
-{% endhighlight %}
+```
+
+
+
+
+    <matplotlib.text.Text at 0x7f8e68fb55d0>
 
 
 
@@ -276,7 +329,7 @@ While the model accross the full temperature is useful, we can improve our model
 
 
 
-{% highlight python %}
+```python
 #temperature ranger 0 to 100 degrees
 selected_temp = data.temperature[30:130]
 selected_r_norm = data.r_norm[30:130]
@@ -314,7 +367,7 @@ residual_error_array = np.asarray(residual_error_list)
 n, bins, patches = plt.hist(residual_error_array, 50, normed=1, facecolor='red', alpha=0.75)
 plt.xlabel("Error in Curve fit (kohm)")
 plt.title("Residual Distribution")
-{% endhighlight %}
+```
 
      fit coefficients:
     [  3.16643400e+02   4.84933743e-02   6.53548105e+00]
@@ -324,6 +377,10 @@ plt.title("Residual Distribution")
      [ -1.67742297e-02   4.14707796e-05   7.51633680e-02]]
 
 
+
+
+
+    <matplotlib.text.Text at 0x7f8e68c48fd0>
 
 
 
@@ -344,7 +401,7 @@ We can see the difference by comparing both of the curve fit models on the inter
 While the testing spec we developed states we should have the capability of measuring from 0-100 degress C, the average range of operation is actually between 20-80 degrees C, so we can change the range to match the standard operating range
 
 
-{% highlight python %}
+```python
 #temperature ranger 0 to 100 degrees
 selected_temp = data.temperature[50:110]
 selected_r_norm = data.r_norm[50:110]
@@ -392,7 +449,7 @@ plt.xlabel("Error in Curve fit (kohm)")
 plt.title("Residual Distribution")
 y = P.normpdf( bins, error_mean, error_sigma)
 l = P.plot(bins, y, 'k--', linewidth=1.5)
-{% endhighlight %}
+```
 
      fit coefficients:
     [  2.94311453e+02   4.51009053e-02   5.05438839e+00]
@@ -464,7 +521,7 @@ We can now write a simple which takes the a volatage as a parameter, and returns
 
 
 
-{% highlight python %}
+```python
 def voltage_to_temperature(voltage_reading):
     r_1 = 274 #kohm
     v_in = 3.3 #Volts
@@ -478,7 +535,7 @@ def voltage_to_temperature(voltage_reading):
     return t
 print voltage_to_temperature(1.8)
 
-{% endhighlight %}
+```
 
     -2.11347171107
 
@@ -486,7 +543,7 @@ print voltage_to_temperature(1.8)
 We can now use this function and plot for the full range of input voltages:
 
 
-{% highlight python %}
+```python
 v_sweep = np.linspace(0, 1.8, num=1000)
 temperature_profile = voltage_to_temperature(v_sweep)
 
@@ -494,7 +551,14 @@ plt.plot(v_sweep, temperature_profile)
 plt.ylabel("Temperature (Celcius)")
 plt.xlabel("Measured Voltage (V)")
 plt.title("Temperature vs Measured Voltage")
-{% endhighlight %}
+```
+
+
+
+
+    <matplotlib.text.Text at 0x7f8e68faf690>
+
+
 
 
 ![png](output_27_1.png)
@@ -502,3 +566,7 @@ plt.title("Temperature vs Measured Voltage")
 
 Using this chart we can now test the system and measure temperature!  The next post will be about combining all the prieces and doing the testing!
 
+
+```python
+
+```

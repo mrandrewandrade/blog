@@ -66,7 +66,7 @@ plt.ylabel("Resistance (kohm)")
 plt.title("Expected Resistance vs Temperature of 100K Thermistor")
 {% endhighlight %}
 
-![png](output_1_1.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_1_1.png)
 
 Now we can see that it does not have a linear relation.  Actually it has a inverse relation or an $$x^{n}$$ where $n<0$ most probably.  Since I am curious, I plotted the min and the max resistance to get a better feel for the error in the temperature reading. My ituition tells me that that is th range the thermister operates in.
 
@@ -83,7 +83,7 @@ plt.title("Resistance vs Temperature of 100K Thermistor")
 {% endhighlight %}
 
 
-![png](output_3_1.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_3_1.png)
 
 
 Now, the top graph, isn't that useful.  All it shows is that the range is very small, and is wider (there is more error) when temperatures are below 0 degrees.  To see if we can do better, lets limit the range (with contingency) of the temperatures we will be dealing with on the project: 0-100 degrees.
@@ -100,7 +100,7 @@ plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
 
 {% endhighlight %}
 
-![png](output_5_1.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_5_1.png)
 
 
 The plot is a bit clearer but not perfect, let's try and be more fancy and reprensent the error with error bars like they do in stats 101.
@@ -120,7 +120,7 @@ plt.ylabel("Resistance (kohm)")
 {% endhighlight %}
 
 
-![png](output_7_1.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_7_1.png)
 
 
 Great!  A bit better, but it is still hard to read.  Let's try plotting the error on the same axis as the expected (normal) resistance.
@@ -140,7 +140,7 @@ plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
 
 
 
-![png](output_9_1.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_9_1.png)
 
 
 From this figure it is quite clear as tempertature decreases, there is more error in the thermistor reading.  This figure also shows that reading taken over 20 C should have good accuracy.  We can even take this futher by one more plot
@@ -157,10 +157,10 @@ plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
 
 
 
-![png](output_12_1.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_12_1.png)
 
 
-This figure shows the upper and lower bound of error (to be around $$\pm 1.5k\Omega$$)+ 125 kohm, since the expected reading would be around $$125kOmega$$ at 20 degrees C.  Knowing the smallest resistance within our operating range will occur at 100 degrees (around $$6720\Omega$$), $$R_1 can be calculated to be around $$1200\Omega$$ using the voltage divider presented in the previous post.  Now, the largest possible error can be calculated and used as a very conservative estime of the temperature reading resolution.  Before we do that, let us fit a curve to the data.  Using grade 11 math, we can estimate that the function which discribes the invest curve would look something like $$resistance = a \times e^{-b \times temprature} + c$$.  We can then use SciPy's [curve_fit](http://docs.scipy.org/doc/scipy-0.16.0/reference/generated/scipy.optimize.curve_fit.html) to determine the fit parameters and the covarience matrix.
+This figure shows the upper and lower bound of error (to be around $$\pm 1.5k\Omega$$)+ 125 kohm, since the expected reading would be around $$125kOmega$$ at 20 degrees C.  Knowing the smallest resistance within our operating range will occur at 100 degrees (around $$6720\Omega$$), R_1 can be calculated to be around $$1200\Omega$$ using the voltage divider presented in the previous post.  Now, the largest possible error can be calculated and used as a very conservative estime of the temperature reading resolution.  Before we do that, let us fit a curve to the data.  Using grade 11 math, we can estimate that the function which discribes the invest curve would look something like $$resistance = a \times e^{-b \times temprature} + c$$.  We can then use SciPy's [curve_fit](http://docs.scipy.org/doc/scipy-0.16.0/reference/generated/scipy.optimize.curve_fit.html) to determine the fit parameters and the covarience matrix.
 
 
 {% highlight python %}
@@ -213,15 +213,15 @@ plt.plot(x2,mlab.normpdf(x2,full_temp_fit_parms[2],sigma[2]), label='uncertainty
 {% endhighlight %}
 
 
-![png](output_16_1.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_16_1.png)
 
 
 
-![png](output_16_2.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_16_2.png)
 
 
 
-![png](output_16_3.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_16_3.png)
 
 
 As we can see, the standard deviation is very small and thus results in a good fit accross the full range of temperature as shown in the three figures below:
@@ -261,15 +261,15 @@ plt.title("Residual Distribution")
 
 
 
-![png](output_18_1.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_18_1.png)
 
 
 
-![png](output_18_2.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_18_2.png)
 
 
 
-![png](output_18_3.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_18_3.png)
 
 
 While the model accross the full temperature is useful, we can improve our model by curve fitting only in the temperature range we are interested in.  This prevents the algorithm for compesating for select set of data which is irrevant.
@@ -328,15 +328,15 @@ plt.title("Residual Distribution")
 
 
 
-![png](output_20_2.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_20_2.png)
 
 
 
-![png](output_20_3.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_20_3.png)
 
 
 
-![png](output_20_4.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_20_4.png)
 
 
 We can see the difference by comparing both of the curve fit models on the interested temperature range:
@@ -407,15 +407,15 @@ l = P.plot(bins, y, 'k--', linewidth=1.5)
 
 
 
-![png](output_23_1.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_23_1.png)
 
 
 
-![png](output_23_2.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_23_2.png)
 
 
 
-![png](output_23_3.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_23_3.png)
 
 
 The results of the curve fit within the standard operating temperature is much better.  Now only is residual error mean essentually zero (9.99e-10 k ohm) with a relatively small standard deviation (0.230 kohm), but the residual error have the general appearance of being normally distributed (unlike the previous curve fits).  What this means is that, the model will predict the resistance very well (have a very low error) for the stardard operating temperatures, but will perform poorer outside.  Luckly for us, our battries will not be operating below 20 degrees C or above 80 degrees C.
@@ -427,9 +427,9 @@ The model we created can now be sumarized to the following equation:
 $$R_2 = a e^{-b \times temperature} + c$$
 where R_2 is meaured in $$k\Omega$$, temperature measued in degree celcius, and the constants a, b, and c were found (through curve fitting) to be:
 
-$$a = 2.94311453 \times 10^2$$
-$$b = 4.51009053 \times 10 ^{-02}$$
-$$c = 5.054388390$$
+$$a = 2.94311453 \times 10^2$$      
+$$b = 4.51009053 \times 10 ^{-02}$$      
+$$c = 5.054388390$$      
 
 In addition, the error in the curve fitting is averaged at 9.99334067349e-10 kohm and the standard deviation of 0.2302444024 kohm.  This error, while small can later be used in filtering algorithms when we are monitoring the temperature.  I will touch on this in a later post, but this data about statistical noise while reading can aid in estimating temperature through more advance software (such as using [Kalman Filtering](https://www.google.ca/url?sa=t&rct=j&q=&esrc=s&source=web&cd=4&cad=rja&uact=8&ved=0CCsQFjADahUKEwiW9b_tiNXIAhWCbB4KHb6oDBA&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FKalman_filter&usg=AFQjCNEN1xRr0hrNRhPHUMGQ_eWCws60CA&sig2=G1o4RCdqnRXSgX1LLMSooQ)).
 
@@ -439,7 +439,7 @@ If we think of the system as a whole, the input to the system is Vo which is mea
 
 To begin, we know that the thermister (R_2) changes resistance values depending on temperature.  We can then use the voltage devider to map this relation:
 
-$$V_o = frac{R_2 V_{in}}{R_1 + R_2}$$
+$$V_o = \frac{R_2 V_{in}}{R_1 + R_2}$$
 
 Vin in this case will be 3.3 V which is provided from the BBB.  As noted in the last post, the spec on the BBB states that that analog input pin can only take in voltage in the range of 0 to 1.8 V.  This means we can set the max Vout = 1.8.  Finally based on the resistance to temperature data, we know that resistance increases as the temperature decreases.  This means that R_2 (the resistance of the thermistor), will be the greatest when T = 0 degrees (R_2 will be around 327 kohms.  We can then use this in our voltage divider equation and solve for R_1.  The solution is R_1 =  272700 ohms.  Because resistors come in standard sizes, 274K ohm is the stardard 1% error resistor to use.  Technically, in this case we should go to the next highest resistor value (to limit the voltage to 1.8V), this doesn't necessarily have to be true since we will not be cooling the batteries lower than room temperature.  While I recommend using the 274k ohm resistor (with 1% error), one can use a 270k ohm (with 5% error) without much concequece if they ensure that the temperature does not fall below 5 degrees.  Even if it does, the Beaglebone has some circuity to help prevent damamge for a slightly larder analog input voltage.
 
@@ -451,17 +451,17 @@ In this equation, R_2 can be solved from R_1 (set by us, V_o (measured), V_in (s
 
 Next we can use the previous curve fit equation, and use algebra solve for temperature:
 
-$$temperature = - \frac{ln (frac {R_2-c}{a}}{b}$$ where $$R_2 > c$$$$
+$$temperature = - \frac{ln (\frac {R_2-c}{a}}{b}$$ where $$R_2 > c$$$$
 
 We can then substitute our relation of R_2 to the measured Vo to get the following equation:
 
-$$temperature = -ln (frac {\frac{R_1 V_o}{V_{in} - V_o}-c}{ab}$$ where $$R_2 > c$$ and $$V_{in} \neq V_o$$$$
+$$temperature = -ln (\frac {\frac{R_1 V_o}{V_{in} - V_o}-c}{ab}$$ where $$R_2 > c$$ and $$V_{in} \neq V_o$$$$
 
 Before we can use this, we have to ensure the conditions hold.  V_o will on equal V_in if R_2 is equal to zero, and we also ensure C (about 5.5 kohm) > R_2.  If we use the data found in the csv, we see that the smallest resistance in our operaterting temperature (100 C) is 6.7100 kohm, so we are safe for both conditions.   
 
+# Results!
+
 We can now write a simple which takes the a volatage as a parameter, and returns the temperature.
-
-
 
 
 {% highlight python %}
@@ -497,7 +497,7 @@ plt.title("Temperature vs Measured Voltage")
 {% endhighlight %}
 
 
-![png](output_27_1.png)
+![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_27_1.png)
 
 
 Using this chart we can now test the system and measure temperature!  The next post will be about combining all the prieces and doing the testing!
