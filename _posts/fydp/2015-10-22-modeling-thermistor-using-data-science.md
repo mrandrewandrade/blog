@@ -497,8 +497,7 @@ plt.title("Temperature vs Measured Voltage")
 {% endhighlight %}
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_27_1.png)
-
+<iframe frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~mrandrewandrade/39.embed"> </iframe> 
 
 Using this chart we can now test the system and measure temperature!  The next post will be about combining all the prieces and doing the testing!
 
