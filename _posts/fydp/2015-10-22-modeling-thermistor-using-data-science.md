@@ -499,5 +499,5 @@ plt.title("Temperature vs Measured Voltage")
 
 <iframe frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~mrandrewandrade/39.embed"> </iframe> 
 
-Using this chart we can now test the system and measure temperature!  The next post will be about combining all the prieces and doing the testing!
+Using [this chart](https://plot.ly/~mrandrewandrade/39.embed) we can now test the system and measure temperature!  The next post will be about combining all the prieces and doing the testing!
 
