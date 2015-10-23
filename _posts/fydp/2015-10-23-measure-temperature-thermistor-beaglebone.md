@@ -67,9 +67,7 @@ plt.ylabel("Resistance (kohm)")
 {% endhighlight %}
 
 
-
-
-<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plot.ly/~mrandrewandrade/84.embed" height="525px" width="100%"></iframe>
+<iframe frameborder="0" seamless="seamless" scrolling="no"  src="https://plot.ly/~mrandrewandrade/84.embed" height="525px" width="100%"></iframe>
 
 
 
@@ -87,7 +85,7 @@ plt.ylabel("Resistance (kohm)")
 
 
 
-<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plot.ly/~mrandrewandrade/80.embed" height="525px" width="100%"></iframe>
+<iframe frameborder="0" seamless="seamless" scrolling="no"  src="https://plot.ly/~mrandrewandrade/80.embed" height="525px" width="100%"></iframe>
 
 
 
@@ -119,7 +117,7 @@ plt.ylabel("Resistance (kohm)")
 {% endhighlight %}
 
 
-<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plot.ly/~mrandrewandrade/95.embed" height="525px" width="100%"></iframe>
+<iframe frameborder="0" seamless="seamless" scrolling="no"  src="https://plot.ly/~mrandrewandrade/95.embed" height="525px" width="100%"></iframe>
 
 
 
@@ -144,13 +142,13 @@ plt.ylabel("Resistance (kohm)")
 
 
 
-<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plot.ly/~mrandrewandrade/97.embed" height="525px" width="100%"></iframe>
+<iframe frameborder="0" seamless="seamless" scrolling="no"  src="https://plot.ly/~mrandrewandrade/97.embed" height="525px" width="100%"></iframe>
 
 
 
 Based on the Resistance vs Temperature Chart, we can make an assumption that the distribution follows the relationship followed by this fitness function:
 
-$$resistnace = a e^{-b \times temperature} + c$$
+$$resistance = a e^{-b \times temperature} + c$$
 where resistance is meaured in $$k\Omega$$, temperature measued in degrees celcius, and the constants a, b, and c can be found (through curve fitting).
 
 Lets define the fitness function and find the constants a, b, and c.
@@ -203,7 +201,8 @@ plt.title("Curve Fit Resitance vs Temperature")
 
 
 
-<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plot.ly/~mrandrewandrade/105.embed" height="525px" width="100%"></iframe>
+<iframe frameborder="0" seamless="seamless" scrolling="no"  src="https://plot.ly/~mrandrewandrade/105.embed" height="525px" width="100%"></iframe>
+
 
 
 
@@ -334,4 +333,5 @@ plt.title("Temperature vs Measured Voltage")
 #py.iplot_mpl(fig)
 {% endhighlight %}
 
-<iframe id="igraph" scrolling="no" style="border:none;"seamless="seamless" src="https://plot.ly/~mrandrewandrade/107.embed" height="525px" width="100%"></iframe>
+<iframe frameborder="0" seamless="seamless" scrolling="no" src="https://plot.ly/~mrandrewandrade/107.embed" height="525px" width="100%"></iframe>
+
