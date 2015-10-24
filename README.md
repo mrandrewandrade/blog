@@ -14,15 +14,8 @@ Personal website using Jekyll-Bootstrap
     
 browse blog at [localhost:4000](http://localhost:4000)
 
-TODO:
-- better 404 page
-- remove discus
-- add CV site 
-- add about me on front page
-- add tags on front page
 Fix:
 - Search
-- Quotes
 
 
 
