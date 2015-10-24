@@ -5,14 +5,13 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
 
 <!-- Don't just copy this code, go to www.addthis.com/dashboard to customize your own -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-562bb95fd3f0255a" async="async"></script>
-<div class="addthis_vertical_follow_toolbox"></div>
-<!-- AddThis Smart Layers END -->
 
 <div class="row-fliud">
     <div class="span8">
         <div class="page-header">
             <h1>{{ page.title }} {% if page.tagline %}<small>{{page.tagline}}</small>{% endif %}</h1>
         </div>
+        <div class="addthis_sharing_toolbox"></div>
         <div class="post-meta">
             {% if page.date %}
             <span class="entry-date">Posted on {{ page.date | date: '%B %d, %Y' }}</span> 
@@ -24,7 +23,6 @@ src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorM
             | <a class="revision-histroy" href="https://github.com/mrandrewandrade/blog/commits/gh-pages/{{ page.path }}" target="_blank">View revision history</a>
         </div>
         
-        <div class="addthis_sharing_toolbox"></div>
 
         <div class="post-content">
             {{ content }}
