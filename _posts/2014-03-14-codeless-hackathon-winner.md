@@ -5,7 +5,7 @@ tagline: "OCP Hackathon Winner: The Codeless Hack"
 description: "OCP Hackathon Winner: The Codeless Hack"
 category: [hardware, cross-posts] 
 tags: [pcb-design, battery, debug, open compute, hardware, Facebook, opencompute.org, openhardware]
-last_updated: 2015-21-11
+last_updated: 2015-10-24
 ---
 
 _This a cross post from the_ [_Open Compute Project_](http://www.opencompute.org/) [_official blog_](http://www.opencompute.org/blog/ocp-hackathon-winner-the-codeless-hack/)      

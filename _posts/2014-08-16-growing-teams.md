@@ -5,7 +5,7 @@ tagline: "First hand experience building PetroPredict's team"
 description: "Growing and Scaling high performance teams"
 category: [Leadership, Start-ups, Cross-posts] 
 tags: [Leadership, Udacity, Start-ups, eCo-op, Productivity]
-last_updated: 2015-10-17
+last_updated: 2015-10-24
 ---
 
 This is a cross-post of a blog post originally written for CBET's [Leadership Blog](https://uwaterloo.ca/conrad-business-entrepreneurship-technology/blog/post/scaling-your-startup-team-and-knowledge) during my [enterprise co-op term](https://uwaterloo.ca/conrad-business-entrepreneurship-technology/undergraduate-students/enterprise-co-op) (intern at my own company) in the summer of 2014.  The blog post was also featured on LinkedIn's [Leadership and Management Pulse](https://www.linkedin.com/pulse/20140816182325-143036205-growing-and-scaling-high-performance-teams?trk=prof-post)  

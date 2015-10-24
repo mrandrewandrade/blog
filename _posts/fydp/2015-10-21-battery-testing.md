@@ -4,7 +4,7 @@ title: "Designing a Battery Testing Rig"
 tagline: "Safely charge and discharge batteries while measuring temperature and voltage"
 category: [FYDP, hardware] 
 tags: [FTDP, engineering, hardware, electrical, battery]
-last_updated: 2015-10-17
+last_updated: 2015-10-24
 ---
 
 # Background

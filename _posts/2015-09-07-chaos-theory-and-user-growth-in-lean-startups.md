@@ -5,6 +5,7 @@ tagline: "Technology Adoption Lifecycle, Pivots and Non-linear differential equa
 description: "My answer to quora to Do any non-linear dynamic (chaos theory) equations describe user growth in lean startups?"
 category: [Quora Answers, Start-ups, Cross-posts] 
 tags: [Start-ups, Chaos theory, pivot, crossing the chasm, running lean, lean, lean startup, strange attractor]
+last_updated: 2015-10-24
 ---
 
 This is a answer I gave on quora to [this question](https://www.quora.com/Lean-Startups/Do-any-non-linear-dynamic-chaos-theory-equations-describe-user-growth-in-startups): Do any non-linear dynamic (chaos theory) equations describe user growth in lean startups?

@@ -4,7 +4,7 @@ title: "How measure temperature using a thermistor and BeagleBone Black"
 tagline: "Thermister Modeling Results"
 category: [FYDP, hardware, data science] 
 tags: [FTDP, engineering, hardware, electrical, battery, thermal, data science, curve fitting, python, residuals]
-last_updated: 2015-10-17
+last_updated: 2015-10-24
 ---
 
 

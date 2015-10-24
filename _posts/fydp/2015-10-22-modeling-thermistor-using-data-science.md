@@ -4,7 +4,7 @@ title: "Modeling a Thermister: Merging Hardware Engineering and Data Science"
 tagline: "Curve fitting, residuals and fun math!"
 category: [FYDP, hardware, data science] 
 tags: [FTDP, engineering, hardware, electrical, battery, thermal, data science, curve fitting, python, residuals]
-last_updated: 2015-10-17
+last_updated: 2015-10-24
 ---
 
 In the [last blog post](http://mrandrewandrade.com/blog/2015/10/21/battery-testing.html), I talked about voltage dividers and how they can be used to limit voltage to eventually connect to an ADC to measure voltage on a BeagleBone.  Today I am going to build on the voltage divider and pair hardware engineering with data science.  The next couple of posts will be pieces of battery testing rig, and then I will put it all togeather to explain how the full system works. First things first, what temperature sensor should we use?
