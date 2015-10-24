@@ -264,7 +264,7 @@ l = P.plot(bins, y, 'k--', linewidth=1.5)
 
 As we can see, the residual error is very small compared to the range of resistance, and follows a (some what) normal distribution.  That we have a model of resistance vs temperature, lets set up our microcontroller (BBB) to measure temperature.  Since our sensor is a variable resistor, we can take an analog mesaurement by passing a current though the thermister and measuring the voltage accross it. Since we need to limit our input voltage to 1.8 V (according to the BBB spec, we can use a voltage divider to limit the maximum voltage accross the thermistor (as shown below)
 
-<iframe title="measuring-temperature-thermistor" width="600" height="600" scrolling="no" frameborder="0" name="measuring-temperature-thermistor" class="eda_tool" src="https://upverter.com/eda/embed/#designId=c31c38d140bec875,actionId="></iframe>
+<iframe title="measuring-temperature-thermistor" width="100%" height="600px" scrolling="no" frameborder="0" name="measuring-temperature-thermistor" class="eda_tool" src="https://upverter.com/eda/embed/#designId=c31c38d140bec875,actionId="></iframe>
 
 
 In our case, we need to calculate the correct R1 to ensure the voltage accross the thermistor (which is read through the analog input pin of the BBB) does not exceed 1.8V based on the maximum operating range of temperature.  For us this is between 0C and 100 C.  Based on the plot of the resistance vs temperature for the thermistor, we know that at 0C, the resistance of the thermistor is a maximum of 327.240 Kohm. We can then use this value as R2 in a generic voltage divider, to calculate for R1.
