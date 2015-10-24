@@ -157,7 +157,7 @@ Lets define the fitness function and find the constants a, b, and c.
 
 {% highlight python %}
 def fitness_function(temperature, a, b, c):
-    return a*np.exp(-b*temperature) + c
+    return a*np.exp(-b*temperature) + c # kohm
 
 selected_temp_fit_parms, selected_temp_fit_covariances = curve_fit(fitness_function,
                                                     selected_temp, selected_r_norm)
@@ -310,7 +310,8 @@ def voltage_to_temperature(voltage_reading):
     r_2 = r_1 * voltage_reading / (v_in - voltage_reading) # kohm
     
     #taken from rearraging fitness function
-    t = -1 * (np.log((r_2-c)/a))/b
+    #solve r_2 = a*np.exp(-b*temperature) + c) for t
+    t = -1 * (np.log((r_2-c)/a))/b #degrees C
     return t
 
 {% endhighlight %}
