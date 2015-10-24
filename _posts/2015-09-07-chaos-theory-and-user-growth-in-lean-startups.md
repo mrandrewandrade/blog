@@ -12,7 +12,7 @@ This is a answer I gave on quora to [this question](https://www.quora.com/Lean-S
 
 I am going to generalize my answer to technology startups, but the concepts can be abstracted to most startups.
 
-**Summary explanation:**
+# Introduction:
 Forgetting the complex equations, lets try and make a function where only technology development and business development (for simplicity) are inputs and get user growth as an output.  If the system was linear then the more technology and the more business which goes into the company would result in more users.
 
 But in real life, user acquisition is more complex than this: Not all tech and business development is the same  and company change and pivot and users come in cycles, not linearly.  There are competitors in the market and fundamental changes in technology.  All of these will contribute to the user growth in a startup.
@@ -23,26 +23,26 @@ That is how chaos theory describes user grown in startups!
 
 Read the full explanation for more details with a specific strange attractor model:
 
-**Prerequisites:**
-1/ Understand Technology Adoption Lifecycle
-2/ Understand the Pivot in terms of Lean Startups
-3/ Non-linear equations, chaos theory and strange attractors
+## Prerequisites:
+1. Understand Technology Adoption Lifecycle
+2. Understand the Pivot in terms of Lean Startups
+3. Non-linear equations, chaos theory and strange attractors
+4. Rössler attractor model for non-linear dynamic user growth in startups
 
-4/ Rössler attractor model for non-linear dynamic user growth in startups
+# 1. Technolgy Adoption Lifecycle
 
-**1/ Technolgy Adoption Lifecycle**
 If you have read Geoffrey Moore's [Crossing the Chasm](http://amzn.to/1N9VK9S) he describes the technology/innovation adoption lifecycle in detail as following a normal distribution or bell curve:
 
 ![](https://qph.is.quoracdn.net/main-qimg-3005bfa31f5708c14682dcb91d4a042e?convert_to_webp=true) 
 
-**2/ The Pivot**
+# 2. The Pivot
 Now if you have read [Running Lean](http://amzn.to/1NUsKot) by Ash Maurya, [The Lean Startup](http://amzn.to/1NUsMMU) by Eric Ries or [The Startup Owner's Manual](http://amzn.to/1N9XfVC) by Steve Blank you will learn about the **pivot**.
 
 The pivot is a "structured course correction designed to test a new fundamental hypothesis about the product, strategy, and engine of growth."   Steve Blank defines a pivot as "changing (or even firing) the plan instead of the executive (the sales exec, marketing or even the CEO)."  The main idea behind the pivot is after building a minimal viable product (MVP) and testing it in the market, you take the feedback you got from launching the early prototype to understanding the market to hopefully finding better product-market fit in the next interation.
 
 A great example of a pivot used by a company was  [Groupon](https://en.wikipedia.org/wiki/Groupon); when the company first started, it was an online activism platform called The Point.  After receiving almost no traction, the founders opened a Wordpress blog and launched their first coupon promotion for a pizzeria located in their building lobby.  Although they only received 20 redemptions, the founders realized that  their idea was significant, and had successfully empowered people to  coordinate group action in purchasing. Three years later, Groupon would grow into a billion dollar business.
 
-**3/ Non-linear equations, chaos theory and strange attractors**
+# 3. Non-linear equations, chaos theory and strange attractors
 To understand the concepts better, you can read the answer to this question:
  [Briefly, what is chaos theory?](https://www.quora.com/Briefly-what-is-chaos-theory) but I will summarize it here.
 
@@ -66,7 +66,6 @@ Let's say a simple equation when plotted at a certain point of time looked like 
 
 ![](https://raw.githubusercontent.com/petroleum101/figures/master/lorenz_attractor/top_left_axis.png)
 
- 
 
 What is unique is that the line goes back upon itself.  At one instant you are at the top right left (Figure above), the next you are at the bottom right (figure below)
 
@@ -78,7 +77,7 @@ If the top left represented sunny, hot and humid and bottom right represented cl
 
 If the dynamic system model evolves through phase space in a way which appears to repeat (called a [Fractal](https://en.wikipedia.org/wiki/Fractal) in mathematics), then the system of equations which describes its motion can be described a [Strange Attractor](https://en.wikipedia.org/wiki/Attractor#Strange_attractor)  (there is a more formal mathematical definition, unnecessary for this explanation).
 
-**4/ Combining the concepts 1 and 2 to form the Rössler Attractor Model**
+# 4. Combining the concepts 1 and 2 to form the Rössler Attractor Model**
 
 So if you combine the technology adoption cycle with the idea of a pivot, every-time a startup company pivots, their company/product has a new addressable market and follows a the bell curve described by the technology adoption lifecycle.
 
