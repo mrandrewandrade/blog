@@ -45,6 +45,8 @@ After drafting out a quick design on paper, we quickly iterated our design on br
 <iframe title="hackathon" width="600" height="500" scrolling="no" frameborder="0" name="hackathon" class="eda_tool" src="https://upverter.com/eda/embed/#designId=67c971c45790061b,actionId="></iframe>
 **Schematic of the debug card we made using Upverter's schematic layout tool.**
 
+**EDIT**: The interactive `iframe` is breaking will all the traffic, you can view the [schematic here](https://upverter.com/mrandrewandrade/53180db3a9c16395/hackathon/).  
+
 For our circuit layout we used Upverter, a start-up that focuses on online board design CAD software. We drew up a quick schematic by sourcing our components online and imported their drawings on Upverter's schematic tool. We then used the tool to create a bill of materials that included the component prices and the cost to spin the board.
 
 We then created a PCB layout for the board. To parallelize our efforts, we performed a quick mock-up on MS Paint of the layout of the board. Derek finished up the PCB layout on Upverter while I did a quick rending of our final product using mechanical CAD software as shown below.
