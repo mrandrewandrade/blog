@@ -269,7 +269,7 @@ As we can see, the residual error is very small compared to the range of resista
 
 In our case, we need to calculate the correct R1 to ensure the voltage accross the thermistor (which is read through the analog input pin of the BBB) does not exceed 1.8V based on the maximum operating range of temperature.  For us this is between 0C and 100 C.  Based on the plot of the resistance vs temperature for the thermistor, we know that at 0C, the resistance of the thermistor is a maximum of 327.240 Kohm. We can then use this value as R2 in a generic voltage divider, to calculate for R1.
 
-<iframe title="voltage-divider" width="600" height="600" scrolling="no" frameborder="0" name="voltage-divider" class="eda_tool" src="https://upverter.com/eda/embed/#designId=79ccecb425cbbda4,actionId="></iframe>
+<iframe title="voltage-divider" width="100%" height="600px" scrolling="no" frameborder="0" name="voltage-divider" class="eda_tool" src="https://upverter.com/eda/embed/#designId=79ccecb425cbbda4,actionId="></iframe>
 
 $$R_1 = R_2 \frac{V_{in}}{V_o} - R_2$$
     
