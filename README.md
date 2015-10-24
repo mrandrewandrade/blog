@@ -14,8 +14,4 @@ Personal website using Jekyll-Bootstrap
     
 browse blog at [localhost:4000](http://localhost:4000)
 
-Fix:
-- Search
-
-
 
