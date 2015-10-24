@@ -109,7 +109,7 @@ JB :
     gauges :
         site_id : 'SITE ID'
     google : 
-        tracking_id : 'TODO'
+        tracking_id : 'UA-44419873-7'
     getclicky :
       site_id : 
     mixpanel :
