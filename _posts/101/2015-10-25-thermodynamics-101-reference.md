@@ -528,7 +528,7 @@ $$\Delta h = \Delta u + \nu \Delta P \cong c_{avg} \Delta T + \nu \Delta P $$ (k
 
 We can also show that since solids are incompressible, the liquid properties remain that same at difference temperature.
 
-$$ du = dh = C_v dT = Cp dT = \bar c dT $$
+$$ du = dh = C_v dT = C_p dT = \bar c dT $$
   
 That is:
 $$\Big\{u, v, h, s \Big\}_{liq} \cong \Big\{u(T), v(T), h(T), s(T) \Big\}_{T}$$
