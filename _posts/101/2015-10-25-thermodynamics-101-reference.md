@@ -6,7 +6,7 @@ category: [101 notes, school]
 tags: [engineering, thermodynamics, thermal, science]
 last_updated: 2015-10-25
 ---
-
+Note: I only got to the state postulate and have notes for the rest.  Still a work in progress.
 
 # assumptions
 
