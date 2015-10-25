@@ -180,7 +180,7 @@ energy to raise temperature of 1 lbm (slug) of water at 68 degrees F by 1 degree
 1 calorie
 amount of energy needed to raise temperature of 1 g of water at 14.5 degress by 1 degree C.
 
-1 cal = 4.16868
+1 cal = 4.16868 J
 
 
 Closed system (or control mass)
