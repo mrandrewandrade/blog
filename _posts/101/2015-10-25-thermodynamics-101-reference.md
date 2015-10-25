@@ -363,11 +363,12 @@ $$\Delta KE = \frac{1}{2}m (V_2^2 - V_1^2)$$,
 $$\Delta PE = mg(z_2-z_1)$$,
 
 
-Now when there is a *constant-pressure process*: \\
+Now when there is a *constant-pressure process*: 
 
-$$W_b + \Delta U + \delta H$$ 
-there fore:
-$$ Q -W_{other} = \Delta H + \Delta KE + \Delta PE $$
+$$W_b + \Delta U + \delta H$$      
+therefore:  
+
+$$ Q -W_{other} = \Delta H + \Delta KE + \Delta PE $$     
 
 
 ### Mechanisms of Energy Transfer
