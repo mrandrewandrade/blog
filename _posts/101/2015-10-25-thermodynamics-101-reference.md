@@ -291,6 +291,12 @@ is the *area under the process curve*.  Here are a couple of forms of boundary w
 General:
 $$W_b = - \int_{1}^{2} P dV $$
 
+$$\delta W_b = F dx = PA dx = P d\vee$$
+
+Where dx is teh change in distance.
+
+
+
 Isobaric ($$P_1 = P_2 = P_0 = constant$$) :
 
 $$ W_b = - P_0 (V_2 - V_1)  $$
@@ -355,6 +361,14 @@ where
 $$\Delta U = m(u_2-u_1) $$,
 $$\Delta KE = \frac{1}{2}m (V_2^2 - V_1^2)$$,
 $$\Delta PE = mg(z_2-z_1)$$,
+
+
+Now when there is a *constant-pressure process*: \\
+
+$$W_b + \Delta U + \delta H$$ 
+there fore:
+$$ Q -W_{other} = \Delta H + \Delta KE + \Delta PE $$
+
 
 ### Mechanisms of Energy Transfer
 
@@ -443,15 +457,45 @@ Where Runiversal is the universal gas constant and M is the molar mass.
 Molar mass M is the mass of one mole.  The mass of a system is equal to its molar mass M and the total number of moles N:
 $$ m = MN $$
 
+# Specific Heats
 
-We can also relate R to specific heat at both constant pressure and constant volume (Cp and Cv).
 
+
+**Specific heat** is the energy required to raise the temperature of a unit mass of a substance by one degree.  
+
+We are interested in two types of specific heat: constant pressure $$c_p$$ and constant volume $$c_{\nu}$$.
+
+$$c_{\nu}$$ is the energy required to raise the temperature of a unit mass of a substance by one degree when *volume is constant*.  The book says to think of it as the change in internal energy divided by the change in temperature. 
+
+$$C_{\nu} = \frac {\partial u} {\partial T}$$    
+or  
+$$u_2 - u_1 = c_{\nu} (T_2-T_1)$$ (kJ/kg)
+
+
+This is because the change in internal energy for an ideal gas using a process is determined by the following integral:
+
+$$\Delta u = u_2 - u_1 = \int_{1}^{2}  C_{\nu} (T) dT $$ (kJ/kg)
+
+Cp is energy required to raise the temperature of a unit mass of a substance by one degree when *pressure is constant*.  The books says to think of it as the change in enthalpy divided by the change in termperature.
+
+$$C_{p} = \frac {\partial h} {\partial T}$$
+
+$$h_2 - h_1 = c_{p} (T_2-T_1)$$ (kJ/kg)      
+
+
+This is because the change in enthalpy for an ideal gas using a process is determined by the following integral:
+
+$$\Delta h = h_2 - h_1 = \int_{1}^{2}  C_{p} (T) dT $$ (kJ/kg)
+
+Specific heat at constant pressure is always greater than at constant volume since at constant pressuer the system is allowed to expand and energy during the expansion creates work into the system.
+
+We can also relate the gas constant R to specific heat.
 $$R = C_p - C_{\nu}$$
 
-Where:
-$$C_{\nu} = \frac {\partial u} {\partial T}$$    
+We can also relate Cp and Cv through a property called the **specific heat ratio** (k)
 
-$$C_{p} = \frac {\partial h} {\partial T}$$    
+$$ k = \frac{c_p}{c_{\nu}}
+
 
 
 I will explain this better below (after real gas and boundary work).
@@ -469,22 +513,23 @@ More on this soon to come!
 $$ \frac{dE}{dt}=  \dot{W} +\dot{Q}+ \dot{M_{in}} (e+pv)_{in} - \dot{M_{out}} (e+pv)_{out} $$
 
 
+# U, S, H of Solids and Liquids
+
+We usually assume that solids and liquids have a constant specific volume, and we called this an incompressible substance.  In this case, the specifics will be the same and just noted as c
+$$c_{\nu} = c_p = c $$    
+
+Now we can do some derivations and show that if we know c value at an average temperature, we can determine the approximate internal energy. That is:
+
+$$\Delta u \cong c_{avg} (T_2 - T_1) $$
 
 
+$$\Delta h = \Delta u + \nu \Delta P \cong c_{avg} \Delta T + \nu \Delta P $$ (kJ/kg)
 
-
-
-
-
-
-Questions:
-
-Now when there is a **constant-pressure process**:
-
-$$W_b + \Delta U + \delta H$$ 
-
+We can also show that since solids are incompressible, the liquid properties remain that same at difference temperature.
 
 $$ du = dh = C_v dT = Cp dT = \bar c dT $$
-    
-        {}liq = {}f(t)
+  
+That is:
+$$\Big\{u, v, h, s \Big\}_{liq} \cong \Big\{u(T), v(T), h(T), s(T) \Big\}_{T}$$
+
 
