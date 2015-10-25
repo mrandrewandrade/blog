@@ -12,16 +12,16 @@ Note: I only got to the state postulate and have notes for the rest.  Still a wo
 
 First lets start with some common assumptions (refer back here when they come up):
 
-1. Kinetic and potential energy remains about constant ($$\Delta KE, \Delta PE ~= 0$$
+1. Kinetic and potential energy remains about constant ($$\Delta KE, \Delta PE ~= 0$$)
 2. Isobaric (pressure is constant)
 3. Isothermal (temperature is constant)
 4. Isovolumetic (total volume (V) is constant)
 5. Rigid (change in volume is zero or $$dV = 0$$)
 6. Adiabatic (heat transfer is zero or $$\dot Q = 0$$
-7. Reversible (\dot P_s = 0)
+7. Reversible ($$\dot P_s = 0$$)
 8. Ideal Gas more below
 9. stead-state or SS (change is zero or d/dt = 0)
-10. steady flow or SD ($$ U_{IN}, h_{IN, ... = constant)
+10. steady flow or SD ($$ U_{IN}, h_{IN},$$ ... = constant)
 11. Liquids and solids have constant volume
 12. Liquids are solids are assumed incompressible
 
@@ -31,30 +31,30 @@ First lets start with some common assumptions (refer back here when they come up
 **zero law of thermodynamics:**
 if two seperate bodies are in thermo equilibrium with a third, they the first two are in equilibrium. (think of the third body as a thermometer and the first two as non conected bodies)
 
-**first law of thermodynamics: **  
+**first law of thermodynamics:**  
 chance in energy of system = energy into system - energy out of system + energy produced by system
 
-**concervation of mass: **
+**concervation of mass:**
 change in mass of system =  mass into system - mass out of system + mass produced by system.
 
 Note: both the mass produced and energy produced by system is usually equal to zero.
 
 
-**second law of thermodynamics: **
+**second law of thermodynamics:**
 energy has _quality_ in addition to having a _quantity_ (more about that later)
 
 ## properties 
 
-** primary/fundamental properties:   **
+**primary/fundamental properties:**
 basic dimentions which describe the universe as we know it (length, mass, time, temperature, electic current, amount of light, amount of matter)
 
-** secondary properties: **
-properties derived from the fundamental properties (ie velocity = length/time)
+**secondary properties:**
+properties derived from the fundamental properties (ie velocity = displacement/time)
 
 ### Mass
 
 I am not going to go into what mass is.  It relates to gravitational attraction and
-$$E = m C^2$$
+$$E = m c^2$$
 
 Its measured in grams in the SI system.
 
@@ -68,7 +68,7 @@ $$ 1 lbf = 32.174 lbm * ft/s^2$$
 ### Force
 Force (F) is mass times acceleration or pressure times area, measured in newtons.
 
-$$ F = P \times A = m g $$
+$$ F = P A = m g $$
 
 Pressure is force divided by area and is measured in Pascals or Pa.
 
@@ -92,11 +92,11 @@ There are a bunch of devices with measure pressure, just look them up if ever yo
 
 Pressure is the same in any fluid measured at the same depth.  Read the book, it explains it.
 
-**intensive property** independant of mass/volume
+**intensive property** independant of mass/volume (temperature, pressure, density)
 
-** extensive propety** property dependant on size of system
+**extensive propety** property dependant on size of system (mass, volume)
 
-**specific property** extensive property per unit mass
+**specific property** extensive property per unit mass (just divide by mass)
 
 **density**  mass per unit volume
 
@@ -106,7 +106,6 @@ $$ \rho = \frac {m}{V}$$
 $$ W = mg $$ (Newtons)
 
 Where m is mass, and g is the acceleration due to gravity
-
 
 **specific weight** is density times acceleration due to gravity
 $$ \gamma = \rho g $$
@@ -125,14 +124,13 @@ $$SG = \frac{\rho}{\rho_{H_2 O}}$$
 
 ## State Postulate
 
-Okay now we now that we can use properties to descripte the state of a system  The thing is we don't need to specify *all* the properties to fix a state.  This means if we decine a sufficient number of properties, then we can determine the rest. As a different example if we know the distance and time someone traveled, we can determine their average velocity.  In the same way if we have two *independant* properties, then we can fix the state if all the other properties are functions of those two properties.  Being independant means that if one property is fixed, the other is still able to be varied.  Now let us call this a fancy term called **state postulate**.  The state postulate dictates how many number of properties is necessary to fix a state.
+Okay now we now that we can use properties to descripte the state of a system  The thing is we don't need to specify *all* the properties to fix a state.  This means if we define a sufficient number of properties, then we can determine the rest. As a different example if we know the distance and time someone traveled, we can determine their average velocity.  In the same way if we have two *independant* properties, then we can fix the state if all the other properties are functions of those two properties.  Being **independant** means that if one property is fixed, the other is still able to be varied. For exmaple, if we fix the x and y axis by telling someone they are not allowed to step forwards,backwards or sideways, the z axis is independant so the person can, in theory, still jump.  Now let us call this a fancy idea the **state postulate**.  The state postulate dictates how many number of properties is necessary to fix a state.
 
->>The state of a simple compresssible system is completly specific by two independant, intensive properties.
+>The state postulate says that the state of a simple compresssible system is completly specific by two independant, intensive properties.
 
-A simple compressible system is when there isn't any electrical, magnetic, gravitational, motion or surface tension effects (or those are so small they are assumed to be neglitable since they require external force to make).  Now if we add an signiticant effect on our system, we now need to add an additional property (for every unique type of effect).  For example if we want to consider gravational effect, we must consider z (for height/elevation).  Since temperature and specific volume are always indpendant, we can always use them to fix the state of a simple compressible system.  Why not pressure and temperature?  For example at sea (P = 1 atm) level water boild at 100 degrees C but on a mountain water can boil at a lower temperature.
+We define a a simple compressible system as on where there isn't any other external effect acting on it.  This means there isn't any electrical, magnetic, gravitational, motion or surface tension effects (or those are so small they are assumed to be neglitable since they require external force to make).  Now if we add an signiticant effect on our system, we now need to add an additional property (for every unique type of effect).  For example if we want to consider gravational effect, we must consider z (for height/elevation).  Since temperature and specific volume are always independant, we can always use them to fix the state of a simple compressible system.  If we fix the volume of a system, it can always change temperature.  Same if we fix temperature, we can change the volume.  Why not pressure and temperature? This is because pressures changes with temperature. For example at sea (P = 1 atm) level water boild at 100 degrees C but on a mountain water can boil at a lower temperature.
 
 ## Processes, Paths and cycles
-
 
 A **process** is then a system goes from one equilibrium state to another.  The exacty series of states which a system passes through is called the **path.**  This means that work is actaully path dependant, while the total energy change is not.  If you don't understand this, try and read chapter two of the Cengel textbook, I can't really explain how I understand this (or if I really do). I would suggest to read the path dependance dependance section for thermodynamic [work](https://en.wikipedia.org/wiki/Work_(thermodynamics))or [nonholonomic systems](https://en.wikipedia.org/wiki/Nonholonomic_system) on Wikipedia, but it is pretty complex and poorly explained there :(.
 
