@@ -98,9 +98,14 @@ Pressure is the same in any fluid measured at the same depth.  Read the book, it
 
 **specific property** extensive property per unit mass (just divide by mass)
 
+**volume** I am using the following symbol for volume:  
+
+$$\vee$$
+
+
 **density**  mass per unit volume
 
-$$ \rho = \frac {m}{V}$$
+$$ \rho = \frac {m}{ \vee }$$
 
 **weight is a force**
 $$ W = mg $$ (Newtons)
@@ -110,9 +115,6 @@ Where m is mass, and g is the acceleration due to gravity
 **specific weight** is density times acceleration due to gravity
 $$ \gamma = \rho g $$
 
-I am using the follwing symbol for volume:  
-
-$$\vee$$
 
 **specific volume** is volume per unit mass
 
