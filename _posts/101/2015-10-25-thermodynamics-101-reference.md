@@ -398,11 +398,11 @@ Therefore a saturated liquid has quality = 0 and a saturated vapor has quality =
 
 If a system consists of a satured mixture (defined at the very top of this page), we can get the average property by using the quality.  Note: properties are independant depending on phase. For example liquid water will have the properties of liquid water, and gaseous water (steam) will have the properties of gasous water even if in the same system.
 
-$$\nu_{avg} = \nu_f + x \dot{} (\nu_{g} - \nu_{f}$$
+$$\nu_{avg} = \nu_f + x \dot{} (\nu_{g} - \nu_{f})$$
 
 we can also rearrange and solve for x
 
-$$ x = \frac{\nu_{avg} - \nu_{f})}{\nu_{g} - \nu_{f}}$$
+$$ x = \frac{\nu_{avg} - \nu_{f}}{\nu_{g} - \nu_{f}}$$
 
 
 In the same way we can define this analysis for internal energy (u), enthalpy (h) and enthropy (s) or any general property (y)
@@ -449,10 +449,12 @@ We can also relate R to specific heat at both constant pressure and constant vol
 $$R = C_p - C_{\nu}$$
 
 Where:
-$$du = C_{\nu} dT$$
-$$dh = C_p dT$$
+$$C_{\nu} = \frac {\partial u} {\partial T}$$    
 
-I will explain this better below
+$$C_{p} = \frac {\partial h} {\partial T}$$    
+
+
+I will explain this better below (after real gas and boundary work).
 
 
 ## Real Gas:
