@@ -6,11 +6,9 @@ category: [101 notes, school]
 tags: [engineering, thermodynamics, thermal, science]
 last_updated: 2015-10-25
 ---
-Note: I only got to the state postulate and have notes for the rest.  Still a work in progress.
 
-# assumptions and common terms
+# Assumptions and Common Terms
 
-## Assumptions
 First lets start with some common assumptions (refer back here when they come up):
 
 1. Kinetic and potential energy remains about constant ($$\Delta KE, \Delta PE ~= 0$$)
@@ -26,7 +24,7 @@ First lets start with some common assumptions (refer back here when they come up
 11. Liquids and solids have constant volume
 12. Liquids are solids are assumed incompressible
 
-## Common terms
+Next lets learn some commons terms (refer back here when they come up):
 
 **compressed liquid** or **subcooled liquid**: fluid in liquid phase and not about to vaporize.
 
@@ -43,8 +41,6 @@ First lets start with some common assumptions (refer back here when they come up
 **saturation pressure**: pressure at which a pure substance change phase
 
 **critical point**: point where thje saturated liquid and saturated vapour states are the same
-
-
 
 # Laws
 
@@ -191,7 +187,7 @@ Internal energy is the sum of all microscopic forms of energy (related to molecu
 
 $$ KE = m \frac {\vee^2}{2} $$
 
-$$ ke = \frac{\vee^2}{2}
+$$ ke = \frac{\vee^2}{2} $$
 
 ## Potential energy
 
@@ -495,7 +491,7 @@ $$R = C_p - C_{\nu}$$
 
 We can also relate Cp and Cv through a property called the **specific heat ratio** (k)
 
-$$ k = \frac{c_p}{c_{\nu}}
+$$ k = \frac{c_p}{c_{\nu}} $$
 
 
 
