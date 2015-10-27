@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Thermodynamics 101 Reference Sheet"
-tagline: "Thermo is easy if you understand the basics"
+title: "Data mining 101 Reference Sheet"
+tagline: "Data mining is easy if you understand the basics"
 category: [101 notes, school, data science] 
 tags: [engineering, data science, data mining]
-last_updated: 2015-10-26
+last_updated: 2015-10-27
 ---
 
 # Part 1: Review
