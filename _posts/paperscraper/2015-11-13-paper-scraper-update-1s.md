@@ -32,7 +32,7 @@ We have scraped over 180,000 publications from [OnePetro.org](http://onepetro.or
 
 First lets import all the libraries we are going to need:
 
-```python
+{% highlight python %}
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -51,22 +51,22 @@ import mpld3
 #Comment below if not using ipython notebook
 %matplotlib inline 
 
-```
+{% endhighlight %}
 The path to the `.csv` with the data is hardcoded.  Once we scrape a finalized dataset we will provide a link here.
 
-```python
+{% highlight python %}
 # paper_meta is 1000 random samples used to prototype
 #data = pd.read_csv('/home/username/path/to/paper_meta.csv', low_memory=False, encoding='utf-8')
 
 #note the .csv includes unicode characters (which will cause issues later)
 data = pd.read_csv('/scratch/paperscraper/data_dump2/meta.csv', low_memory=False, encoding='utf-8')
 
-```
+{% endhighlight %}
 
 Attempts were made to deal with missing values, non sensical data and sanitization of unicode.  We will be updating this as we progress with the project, but here is the initial code we used:
 
 
-```python
+{% highlight python %}
 # take in text dump and cleans everything to string
 def sanitize_text(data_input):
     
@@ -85,10 +85,10 @@ def sanitize_text(data_input):
          
 data = data.applymap(sanitize_text)
 
-```
+{% endhighlight %}
 Now that the data is somewhat cleaner and typeset to a string, we can extract the year from the string of dates through a regular expression (`regex`)
 
-```python
+{% highlight python %}
 #simple regex in include only digits
 digits_only = re.compile(r'[^\d]+')
 
@@ -101,13 +101,13 @@ def clean_date(date):
         return float(digit_only_date)
     
 data.date = data.date.map(clean_date)
-```
+{% endhighlight %}
 
 ### Exploratory Data Analysis
 
 Now that we have our data somewhat sanitized, we attempted to visualize the data to get a better understanding before building any models
 
-```python
+{% highlight python %}
 start_date = data.date.min(axis=0)
 end_date = data.date.max(axis=0)
 date_range = end_date - start_date
@@ -115,7 +115,7 @@ date_range = end_date - start_date
 data['date'].plot(kind='hist',bins = int(date_range),  cumulative=True)
 plt.xlabel("Date (Year)")
 plt.ylabel("Frequency of Papers Published")
-```
+{% endhighlight %}
 
 Now that we have clean data we can work with, lets get some figures for some some initial summary statistics to better undestand what the data looks like.
 
@@ -123,18 +123,18 @@ Now that we have clean data we can work with, lets get some figures for some som
 
 We can see an exponentially increase number of publications over time.
 
-```python
+{% highlight python %}
 data['abstract_length'] = data['abstract'].apply(len)
 data.abstract_length.plot(kind='hist')
 
 plt.xlabel("Length of Publication Abstract (characters)")
 plt.ylabel("Frequency")
-```
+{% endhighlight %}
 
 ![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/output_8_1.png)
 
 
-```python
+{% highlight python %}
 data['abstract_length'] = data['abstract'].apply(len)
 
 
@@ -144,7 +144,7 @@ data.abstract_length.plot(kind='hist',bins =100)
 plt.xlabel("Length of Publication Abstract (characters)")
 plt.ylabel("Frequency")
 
-```
+{% endhighlight %}
 
 
 ![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/output_9_1.png)
@@ -155,7 +155,7 @@ Have a large number of abstracts with length of 0 mean that either some of the p
 Further investigation indicates that both are reasons.  Some papers legitimately do not have abstracts posted, while for others the abstract was saved under a different `<div>`.  In the next iteration, more robust scaping will be conducted.
 
 
-```python
+{% highlight python %}
 data['title_length'] = data['title'].apply(len)
 
 data.title_length.plot(kind='hist')
@@ -163,26 +163,26 @@ data.title_length.plot(kind='hist')
 plt.xlabel("Length of Publication Title (characters)")
 plt.ylabel("Frequency")
 
-```
+{% endhighlight %}
 
 ![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/output_11_1.png)
 
-```python
+{% highlight python %}
 data['title_length'] = data['title'].apply(len)
 
 data.title_length.plot(kind='hist',bins =50,  cumulative=False)
 
 plt.xlabel("Length of Publication Title (characters)")
 plt.ylabel("Frequency")
-```
+{% endhighlight %}
 
 ![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/output_12_1.png)
 
 The intial EDA shows that the data is reasonable, so we can save the cleaned data and move onto more advanced exploratory data analysis
 
-```python
+{% highlight python %}
 #data.to_csv("/scratch/paperscraper/data_dump2/meta_cleaned.csv", sep=',')
-```
+{% endhighlight %}
 
 ### Exploratory Data Analysis
 
@@ -191,27 +191,27 @@ We took all the abstracts that were scraped and cleaned, then combined them into
 
 First lets get common common English [stopwords](https://en.wikipedia.org/wiki/Stop_words)
 
-```python
+{% highlight python %}
 # load nltk's English stopwords as variable called 'stopwords'
 stopwords = nltk.corpus.stopwords.words('english')
 # display 10 stop words to check if working
 print stopwords[:10]
-```
+{% endhighlight %}
 
     [u'i', u'me', u'my', u'myself', u'we', u'our', u'ours', u'ourselves', u'you', u'your']
 
 
 Next, lets use Python's `nltk`'s `SnowballStemmer` to have the ability to [stem words](https://en.wikipedia.org/wiki/Stemming) for our analysis. 
 
-```python
+{% highlight python %}
 from nltk.stem.snowball import SnowballStemmer
 stemmer = SnowballStemmer("english")
 print stemmer
-```
+{% endhighlight %}
 Now let's use this method to define a function to tokenize and steam all the words in each abstract.  We will also define a function which will just tokenize the abstracts to be used for comparision.
 
 
-```python
+{% highlight python %}
 # here I define a tokenizer and stemmer which returns the set of stems in the text that it is passed
 
 def tokenize_and_stem(text):
@@ -235,11 +235,11 @@ def tokenize_only(text):
         if re.search('[a-zA-Z]', token):
             filtered_tokens.append(token)
     return filtered_tokens
-```
+{% endhighlight %}
 Now here is where I scrape togther a method to get a tokenized and stemmed corpus.  The corpus is a large body of text which includes a list of words from ALL of the abstracts.  This will be used in the later analysis.
 
 
-```python
+{% highlight python %}
 #this takes 30 mins-1.5 hours to run on all the data
 totalvocab_stemmed = []
 totalvocab_tokenized = []
@@ -258,18 +258,18 @@ for i in data.abstract:
     
     if count%10000 == 0:
         print count
-```
+{% endhighlight %}
 
 Now that we have a list of strings (words), we can join them all to get a full list of strings.
 
-```python
+{% highlight python %}
 # join vector of words to create corpus
 stemmed_corpus = ' '.join(totalvocab_stemmed)
 tokenized_corpus = ' '.join(totalvocab_tokenized)
-```
+{% endhighlight %}
 Since it took quite a while to run, lets write the both the corpus to a `.txt` file in case we want to use it later.
 
-```python
+{% highlight python %}
 #write the corpus to file
 
 with open("/scratch/paperscraper/data_dump2/stemmed_corpus.txt", "w") as text_file:
@@ -278,10 +278,10 @@ with open("/scratch/paperscraper/data_dump2/stemmed_corpus.txt", "w") as text_fi
 with open("/scratch/paperscraper/data_dump2/tokenized_corpus.txt", "w") as text_file:
     text_file.write("%s" % tokenized_corpus)
 
-```
+{% endhighlight %}
 Now lets make a word cloud on both the tokenized and stemmed corpus:
 
-```python
+{% highlight python %}
 
 # Generate a word cloud image
 wordcloud = WordCloud(width=1800,
@@ -292,14 +292,14 @@ plt.imshow(wordcloud)
 plt.axis("off")
 
 plt.savefig('./tokenized_wordcloud.png', dpi=300)
-```
+{% endhighlight %}
 
 
 ![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/output_23_0.png)
 
 
 
-```python
+{% highlight python %}
 wordcloud = WordCloud(width=1800,
                       height=1400,
 ).generate(stemmed_corpus)
@@ -309,7 +309,7 @@ plt.imshow(wordcloud)
 plt.axis("off")
 
 plt.savefig('./stemmed_wordcloud.png', dpi=300)
-```
+{% endhighlight %}
 
 
 ![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/output_24_0.png)
