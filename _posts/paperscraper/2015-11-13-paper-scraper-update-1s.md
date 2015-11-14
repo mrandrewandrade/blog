@@ -19,14 +19,15 @@ last_updated: 2015-11-13
 As part of the term project for MSCI446, our project's objective is to scrape the abstracts of publications from a [OnePetro.org](http://onepetro.org) and match up Artificial Intelligence techniques used to specific Oil & Gas disciplines. So far we have worked on scraping the data, cleaning the data, and performed exploratory data analysis to better understand our data set.
 
 # Data Collection, Cleaning and Storage
-We have scraped over 180,000 publications from [OnePetro.org](http://onepetro.org) using `Mechanize` and `BeautifulSoup` libraries for parsing html and saved each publication's metadata into a text file in json format. We used a script to load each publication into python and perform some basic data cleaning before loading the data into a Postgres Database: 
-- remove \n, \t, &nbsp, &amp, &quot <-- [seems unnessecary since tokenizer takes care of this]
-- some articles did not have any abstracts, they were removed from our data set, this brought our data set down to 117,000 <-- [these papers legitimately did not have abstracts]
-- some abstracts began with a concatenation of the words Abstract, Summary or Presentation to the first word of the abstract (with no space in between), we removed those words so we that our tokenizer would include the first word that was incorrectly concatenated
-- entire texts of abstract and disciplines of the publications were saved and every other field was truncated at 255 characters
-- we spent a lot of time dealing with infrastructure setup issues with Postgres (especially working across 3 different  operating systems) and were unable to effectively view data using psql, i.e. large text of data like abstract would mess up the view
-- eventually, we abandoned the database approach of storing information and resorted to saving into .csv to persist our dataset between sessions and users.  The idea is that we can load the full .csv file into memory using a dataframe and do all the analysis in memory.
-- A significant part of the analysis was the actual data sanitation.  The key takeaway is that real world data is difficult to deal with.  Different types, missing and even sometimes incorrect data all lead to problems.  The next section loads in the .csv file, sanitizes the data and does basic exploratory analysis
+We have scraped over 180,000 publications from [OnePetro.org](http://onepetro.org) using `Mechanize` and `BeautifulSoup` libraries for parsing html and saved each publication's metadata into a text file in json format. We used a script to load each publication into python and perform some basic data cleaning before loading the data into a Postgres Database:  
+
+- remove \n, \t, &nbsp, &amp, &quot <-- [seems unnessecary since tokenizer takes care of this]  
+- some articles did not have any abstracts, they were removed from our data set, this brought our data set down to 117,000 <-- [these papers legitimately did not have abstracts]  
+- some abstracts began with a concatenation of the words Abstract, Summary or Presentation to the first word of the abstract (with no space in between), we removed those words so we that our tokenizer would include the first word that was incorrectly concatenated  
+- entire texts of abstract and disciplines of the publications were saved and every other field was truncated at 255 characters  
+- we spent a lot of time dealing with infrastructure setup issues with Postgres (especially working across 3 different  operating systems) and were unable to effectively view data using psql, i.e. large text of data like abstract would mess up the view  
+- eventually, we abandoned the database approach of storing information and resorted to saving into .csv to persist our dataset between sessions and users.  The idea is that we can load the full .csv file into memory using a dataframe and do all the analysis in memory.  
+- A significant part of the analysis was the actual data sanitation.  The key takeaway is that real world data is difficult to deal with.  Different types, missing and even sometimes incorrect data all lead to problems.  The next section loads in the .csv file, sanitizes the data and does basic exploratory analysis  
 
 ## Sanitizing Unicode, Missing Values and Other Fun Things
 
