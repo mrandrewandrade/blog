@@ -104,7 +104,7 @@ def clean_date(date):
 data.date = data.date.map(clean_date)
 {% endhighlight %}
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
 
 Now that we have our data somewhat sanitized, we attempted to visualize the data to get a better understanding before building any models
 
@@ -185,9 +185,8 @@ The intial EDA shows that the data is reasonable, so we can save the cleaned dat
 #data.to_csv("/scratch/paperscraper/data_dump2/meta_cleaned.csv", sep=',')
 {% endhighlight %}
 
-### Exploratory Data Analysis
 
-#### Combined abstracts
+## Combined abstracts
 We took all the abstracts that were scraped and cleaned, then combined them into 1 giant text corpus. We then removed the basic english stopwords from the list, tokenized and stemmed the words and created a wordcloud. This gave us a clue into customizing our stopword list to include words like Oil, Gas and Drill that occured most frequently in almost all the abstracts. This involved a very long process of tokenizing everyword in the abstracts.
 
 First lets get common common English [stopwords](https://en.wikipedia.org/wiki/Stop_words)
@@ -316,7 +315,7 @@ plt.savefig('./stemmed_wordcloud.png', dpi=300)
 ![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/output_24_0.png)
 
 
-#### Reducing search terms
+### Reducing search terms
 Since our use case pertains only to the AI techniques and which disciplines they are used in, we first check if the AI techniques list is in fact present in the combined abstracts. Any AI techniques that are not present are removed, since they are irrelevant to the library of publications that we are accessing.
 
 #### Individual abstracts
@@ -327,8 +326,115 @@ After narrowing down our dataset to those that only include AI technique search 
 
 
 
-#### Clustering
-We performed k-means clustering using the cosine similarity on the frequency of AI techniques mentioned in each of the abstracts. We've tried using both the raw frequency and normalized frequency to see how the clusters might change. We've created 2 to 10 clusters and plotted the results to see if we could make sense of the relationship between cluster memberships.
+# Clustering
+We performed k-means clustering using the cosine similarity on the frequency of AI techniques mentioned in each of the abstracts. We've tried using both the raw frequency and normalized frequency to see how the clusters might change. We used k means clusting to create clusters from 2 to 10 clusters and plotted the results through a word cloud to see if we could make sense of the relationship between cluster memberships.  Since the clustering is done by the cosine similarity from the frequency of the words, it will give a good idea about the natural clustering of the words.
+
+## Two Clusters Total
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_2specific0.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_2specific1.png)
+
+## Three Clusters Total
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_3specific0.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_3specific1.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_3specific2.png)
+
+## Four Clusters Total
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_4specific0.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_4specific2.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_4specific3.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_4specific4.png)
+
+## Five Clusters Total
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_5specific0.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_5specific1.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_5specific2.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_5specific3.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_5specific4.png)
+
+
+
+## Six Clusters Total
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_6specific0.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_6specific1.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_6specific2.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_6specific3.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_6specific4.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_6specific5.png)
+
+
+## Seven Clusters Total
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_7specific0.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_7specific1.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_7specific2.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_7specific3.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_7specific4.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_7specific5.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_7specific6.png)
+
+## Eight Clusters Total
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_8specific0.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_8specific1.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_8specific2.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_8specific3.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_8specific4.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_8specific5.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_8specific6.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_8specific7.png)
+
+## Nine Clusters Total
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_9specific0.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_9specific1.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_9specific2.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_9specific3.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_9specific4.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_9specific5.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_9specific6.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_9specific7.png)
+
+![png](http://mrandrewandrade.com/blog/images/paperscraper-update-1/wordcloud_cluster_9specific8.png)
 
 
 #### Tallying by frequency for each year
