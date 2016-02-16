@@ -4,7 +4,6 @@ title: "Generalized Solution to Multi-Echelon Inventory Decisions"
 category: [technology, tools, manufacturing, supply chain] 
 tags: [Technology, Optimization, Non-convex optimization, manufacturing, supply chain, production engineering ]
 last_updated: 2016-02-16
-date:   2016-02-16 21:46:04
 ---
 
 This post outlines the generalized solution to Multi-Echelon Inventory Decisions by finding the lower, upper and average bound for an optimal solution.  It then outlines a genetic algorithm approach to finding the optimal solution.  The genaralized solution procedure is applied to the [Multi-Echelon Inventory 
