@@ -6,7 +6,7 @@ tags: [Technology, Optimization, Non-convex optimization, manufacturing, supply 
 last_updated: 2016-02-16
 ---
 
-This post outlines the generalized solution to Multi-Echelon Inventory Decisions by finding the lower, upper and average bound for an optimal solution.  It then outlines a genetic algorithm approach to finding the optimal solution.  The genaralized solution procedure is applied to the [Multi-Echelon Inventory 
+This post outlines the generalized solution to Multi-Echelon Inventory Decisions by finding the lower, upper and average bound for an optimal solution.  It then outlines a genetic algorithm approach to finding the optimal solution.  The generalized solution procedure is applied to the [Multi-Echelon Inventory 
 Decisions at Jefferson 
 Plumbing Supplies
 To Store or Not to Store?](http://ptgmedia.pearsoncmg.com/images/9780133757880/samplepages/0133757889.pdf) Case Study
@@ -16,7 +16,7 @@ Introduction:
 =============
 
 Alex, a NASCAR enthusiast, is the Inventory Manager of Jefferson
-Plumbing Supplies, and he faces an interesting quandry. He has been
+Plumbing Supplies, and he faces an interesting quandary. He has been
 notified by one of his suppliers that there is an upcoming increase to
 their minimum order quantity. The following case study summary presents
 a description, a system model, and a summary and conclusion for the
@@ -49,7 +49,7 @@ amount
 
 5\. find alternative storage
 
-Given that option 1, 2, and 5 are not feasable there is option 3 (the
+Given that option 1, 2, and 5 are not feasible there is option 3 (the
 base case) and option 4.
 
 Variables
@@ -75,7 +75,7 @@ Assumption given in case study:\
 2\. The cost of not having inventory is very high (lost of profit and
 lost of customers and future profit)
 
-3\. Minimum order quantity $Q_{min} = 130$ units, previous order quantity
+3\. Minimum order quantity $$Q_{min} = 130$$ units, previous order quantity
 was about 130/3 units 4. No capacity limits 5. Must always have positive
 inventory (no backorders) based on assumption 2
 
@@ -127,7 +127,7 @@ With the optimal annual cost would be:
 
 $$C^* =  C(Q^*) = \sqrt{2 \lambda k_p h_s}  \cong \$447.21$$
 
-Since the minimum order quantity $Q_{min} \ge 130$ as stated in the
+Since the minimum order quantity $$Q_{min} \ge 130$$ as stated in the
 problem and the actual optimal annual cost would be:
 
 $$C(Q_{min}) = \frac{k_p \lambda}{Q_{min}} + \frac{h_s Q_{min}}{2} \cong \$726$$
@@ -156,10 +156,10 @@ store inventory at the warehouse and order parts when required. This
 assumption will be later verified by comparing the total cost to the
 base case.
 
-We are going to introduce the reorder interval $ \textbf{u} = Q /
-\lambda $, and can be thought of as a vector for each stage (j) of the
-ordering process. In our case, $u_w$ is the ordering period made **at**
-the warehouse **from the store** and $u_p$ is the ordering period **at
+We are going to introduce the reorder interval $$ \textbf{u} = Q /
+\lambda $$, and can be thought of as a vector for each stage (j) of the
+ordering process. In our case, $$u_w$$ is the ordering period made **at**
+the warehouse **from the store** and $$u_p$$ is the ordering period **at
 the production factory** from the warehouse.
 
 The averaged annual cost function (to be minimized) of the most ideal
@@ -181,7 +181,7 @@ $u_p$
 $$u_p \ge \frac{Q_{min}}{\lambda} = \frac{13}{10}$$
 
 Solving this optimization problem for the optimum reorder interval
-$\textbf{u*}$ leads to a non-convex mixed integer non-linear
+$$\textbf{u*}$$ leads to a non-convex mixed integer non-linear
 programming. Since the constrained solution is non-convex, it does not
 have a guaranteed optimal solution except in limit. For this reason, a
 generalized approach to finding the lower, upper and mean average annual
@@ -211,7 +211,7 @@ $$u_p \ge \frac{Q_{min}}{\lambda} = \frac{13}{10}$$
 This can be solved using multi-variate calculus or [numerically]
 
 Using calculus, the partial derivative of the cost function with respect
-to $u_p$ can be taken as:
+to $$u_p$$ can be taken as:
 
 $$\frac{\partial}{\partial u_p}(\frac{k_w}{u_w}+ \frac{h_s \lambda u_w}{2} + \frac{k_p}{u_p}+\frac{h_w \lambda u_p}{2})= \frac{\lambda  h_w}{2}- \frac{k_p}{u_p^2}$$
 
@@ -220,7 +220,7 @@ Now solving for $u_p$
 $$u_p^*  = ±\frac{\sqrt{\frac{2k_p}{h_w}} }{\sqrt{\lambda}} = \sqrt{2} \ge \frac{13}{10}$$
 
 Similarly, the partial derivative of the cost function with respect to
-$u_w$ can be taken as:
+$$u_w$$ can be taken as:
 
 $$\frac{\partial}{\partial u_w}(\frac{k_w}{u_w}+ \frac{h_s \lambda u_w}{2} + \frac{k_p}{u_p}+ \frac{h_w \lambda u_p}{2})= \frac{h_s \lambda}{2}-\frac{k_w}{u_w^2}$$
 
@@ -240,8 +240,6 @@ The retail store would order:
 
 $$Q_w^* = u_w \lambda = 100 \sqrt{10} \cong 31.522 =  32 units$$
 
-  [numerically]: http://www.wolframalpha.com/input/?i=minimize+%2850%29%2F%28x%29+%2B+%2810+*+100+*+x%29%2F%282%29+%2B+%28100%29%2F%28y%29%2B+%281+*+100+*+y%29%2F%282%29+such+that+x%3E+0+%2C+y+%3E+13%2F10
-
 This would result in the overall cost to be:
 
 $$C(\textbf{Q}) = \frac{129979}{284} \cong \$457.67$$
@@ -256,7 +254,7 @@ The retail store would order:
 $$Q_w^* = u_w \lambda = 100/3 \cong  33.33 =  34 units$$
 
 This results in the following approximate ideal average annual cost
-$C(\textbf{Q})_{ideal} \cong $ [\$441.81] This lower bound would be
+$$C(\textbf{Q})_{ideal} \cong $$ [\$441.81](http://www.wolframalpha.com/input/?i=%2850%29%2F%28x%29+%2B+%289+*+100+*+x%29%2F%282%29+%2B+%28100%29%2F%28y%29%2B+%281+*+100+*+y%29%2F%282%29%2C+x+%3D+0.34%2C+y+%3D+1.42) This lower bound would be
 better estimated by evaluating the cost of storing the remaining
 inventory in the warehouse. For example, after the first order cycle of
 142 parts from the supplier and first three shipments to the store,
@@ -272,22 +270,20 @@ cycle. This means the actual lower bound of the solution is around
 solution is around \$16.19 or the price of a beer and a Speedway Big Hog
 Chedder Dog at a Nascar event and the approximate average annual cost
 would sit closer to \$448.41. Since the optimal order quantity from the
-warehouse is $Q_w* = 34$ units,
-$\theta_{theoretical}^* = Q_w^* / Q_p^* \cong 4.176470588 $ and
-$\theta_{actual}^* = 4$. Since the difference between
-$\theta_{theoretical}^*$ and $\theta_{actual}^*$ is small, the actual
+warehouse is $$Q_w* = 34$$ units,
+$$\theta_{theoretical}^* = Q_w^* / Q_p^* \cong 4.176470588 $$ and
+$$\theta_{actual}^* = 4$$. Since the difference between
+$$\theta_{theoretical}^*$$ and $$\theta_{actual}^*$$ is small, the actual
 solution would be much closer to the lower bound.
 
-  [\$441.81]: http://www.wolframalpha.com/input/?i=%2850%29%2F%28x%29+%2B+%289+*+100+*+x%29%2F%282%29+%2B+%28100%29%2F%28y%29%2B+%281+*+100+*+y%29%2F%282%29%2C+x+%3D+0.34%2C+y+%3D+1.42
-
-
-
-Genetic Algorithm Solution
+Constrained Optimization Solution
+======================
 
 To improve upon the generalized approach and attempt to find the true
 optimal solution, the optimization problem can be solved using a
-non-linear programming tool such as Goal Seek in Excel, as demonstrated in this spreadsheet (TODO: upload spreadsheet). Alternatively,
-the lower bound of the optimal solution can be estimated [numerically]
+non-linear programming tool such as Goal Seek in Excel, as demonstrated in this [spreadsheet](http://mrandrewandrade.com/blog/images/case-study.xls). Alternatively,
+the lower bound of the optimal solution can be estimated [numerically](http://www.wolframalpha.com/input/?i=minimize+%2850%29%2F%28x%29+%2B+%2810+*+100+*+x%29%2F%282%29+%2B+%28100%29%2F%28y%29%2B+%281+*+100+*+y%29%2F%282%29+such+that+x%3E+0+%2C+y+%3E+13%2F10)
+
 or using calculus. Then $\theta_j$ can be calculated and rounded to find
 the order quantities (as shown in the generalized solution).
 
@@ -314,15 +310,15 @@ reaches zero), results in an actual optimal annual cost of around \$726
 This means that this would cost the store about \$277.79 more if they
 choose to order, ship and store to the retail store.
 
-Optimum Cost Using a Warehouse {#optimum-cost-using-a-wharehouse}
+Optimum Cost Using a Warehouse
 ------------------------------
 
 Given the assumptions in this problem, the approximate optimum solution
-of the two stage edeterministic multi-echelon serial system provides an
+of the two stage deterministic multi-echelon serial system provides an
 annual cost of around \$447.21. This means that the policy change would
 cost the store at most about \$5.61 less if they order 144 parts to the
 warehouse and 136 parts from the warehouse to the retail store. Alex
-Halek would be able to rest at ease and possibly use those savings
+Halek wwould be able to rest at ease and possibly use those savings
 towards the purchase of a delicious Speedway Big Hog Cheddar Dog at next
 year’s Spring Cup.
 
