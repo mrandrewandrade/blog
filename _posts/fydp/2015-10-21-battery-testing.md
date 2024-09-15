@@ -8,7 +8,7 @@ last_updated: 2015-10-24
 ---
 
 # Background
-As [previously mentioned](http://mrandrewandrade.com/blog/2015/09/11/fydp-ess.html) my fourth year design project (FYDP) involves building an energy storage system (ESS) using repurposed electric vehicle (EV) batteries.  After individual battery cells are removed from the large high voltage EV battery, the first step the project is testing the battery cells to see if they are "healthy" and ready to use.  This means we have to charge and discharge the cells while monitoring both the voltage and the temperture.  We are planning on using a BeagleBone Black (BBB) as our microcontroller (show below), and have to pick sensors to measure voltage and temperature.
+As [previously mentioned](https://andrewandrade.ca/blog/2015/09/11/fydp-ess.html) my fourth year design project (FYDP) involves building an energy storage system (ESS) using repurposed electric vehicle (EV) batteries.  After individual battery cells are removed from the large high voltage EV battery, the first step the project is testing the battery cells to see if they are "healthy" and ready to use.  This means we have to charge and discharge the cells while monitoring both the voltage and the temperture.  We are planning on using a BeagleBone Black (BBB) as our microcontroller (show below), and have to pick sensors to measure voltage and temperature.
 
 ![](http://beagleboard.org/static/images/black_hardware_details.png)
 

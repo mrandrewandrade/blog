@@ -281,7 +281,7 @@ Constrained Optimization Solution
 
 To improve upon the generalized approach and attempt to find the true
 optimal solution, the optimization problem can be solved using a
-non-linear programming tool such as Goal Seek in Excel, as demonstrated in this [spreadsheet](http://mrandrewandrade.com/blog/images/case-study.xls). Alternatively,
+non-linear programming tool such as Goal Seek in Excel, as demonstrated in this [spreadsheet](https://andrewandrade.ca/blog/images/case-study.xls). Alternatively,
 the lower bound of the optimal solution can be estimated [numerically](http://www.wolframalpha.com/input/?i=minimize+%2850%29%2F%28x%29+%2B+%2810+*+100+*+x%29%2F%282%29+%2B+%28100%29%2F%28y%29%2B+%281+*+100+*+y%29%2F%282%29+such+that+x%3E+0+%2C+y+%3E+13%2F10)
 
 or using calculus. Then $\theta_j$ can be calculated and rounded to find

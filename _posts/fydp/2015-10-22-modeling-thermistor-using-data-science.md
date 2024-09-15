@@ -7,7 +7,7 @@ tags: [FTDP, engineering, hardware, electrical, battery, thermal, data science, 
 last_updated: 2015-10-24
 ---
 
-In the [last blog post](http://mrandrewandrade.com/blog/2015/10/21/battery-testing.html), I talked about voltage dividers and how they can be used to limit voltage to eventually connect to an ADC to measure voltage on a BeagleBone.  Today I am going to build on the voltage divider and pair hardware engineering with data science.  The next couple of posts will be pieces of battery testing rig, and then I will put it all togeather to explain how the full system works. First things first, what temperature sensor should we use?
+In the [last blog post](https://andrewandrade.ca/blog/2015/10/21/battery-testing.html), I talked about voltage dividers and how they can be used to limit voltage to eventually connect to an ADC to measure voltage on a BeagleBone.  Today I am going to build on the voltage divider and pair hardware engineering with data science.  The next couple of posts will be pieces of battery testing rig, and then I will put it all togeather to explain how the full system works. First things first, what temperature sensor should we use?
 
 ## Selecting a Thermal Sensor
 
@@ -33,7 +33,7 @@ The most important piece of information to get started using the thermister is i
 
 
 ## Mapping Resistance to Temperature using Curve Fitting 
-The site included a weird [word document](http://www.robotdigg.com/upload/pdf/100k-thermistor.doc) with a bunch of numbers.  It really confuses me why one would have tabular data in a word document, a spreadsheet serves that purpose.  Anyways, the information was easily extractable and I was able to put it into an spreadsheet and save as a .CSV file.  If you want to follow along, you can you download the document [here](http://mrandrewandrade.com/datasets/100k-thermistor.csv)
+The site included a weird [word document](http://www.robotdigg.com/upload/pdf/100k-thermistor.doc) with a bunch of numbers.  It really confuses me why one would have tabular data in a word document, a spreadsheet serves that purpose.  Anyways, the information was easily extractable and I was able to put it into an spreadsheet and save as a .CSV file.  If you want to follow along, you can you download the document [here](https://andrewandrade.ca/datasets/100k-thermistor.csv)
 
 Once you own the file in a speadsheet program or in your text editor of choice, you can see there are four columns: temperature in Celcius, maximum resistance in $$k\Omega$$,  normal (average)resistance in $$k\Omega$$ and  minimum resistance in $$k\Omega$$ .  If we were measuring the resistance by hand, we could simply just look up (and eyeball) the closest resistance value and read of the temperature.  We could be more fancy and use [linear interpolation](https://en.wikipedia.org/wiki/Linear_interpolation) as an alternative to eyeballing.
 
@@ -66,7 +66,7 @@ plt.ylabel("Resistance (kohm)")
 plt.title("Expected Resistance vs Temperature of 100K Thermistor")
 {% endhighlight %}
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_1_1.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_1_1.png)
 
 Now we can see that it does not have a linear relation.  Actually it has a inverse relation or an $$x^{n}$$ where $n<0$ most probably.  Since I am curious, I plotted the min and the max resistance to get a better feel for the error in the temperature reading. My ituition tells me that that is th range the thermister operates in.
 
@@ -83,7 +83,7 @@ plt.title("Resistance vs Temperature of 100K Thermistor")
 {% endhighlight %}
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_3_1.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_3_1.png)
 
 
 Now, the top graph, isn't that useful.  All it shows is that the range is very small, and is wider (there is more error) when temperatures are below 0 degrees.  To see if we can do better, lets limit the range (with contingency) of the temperatures we will be dealing with on the project: 0-100 degrees.
@@ -100,7 +100,7 @@ plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
 
 {% endhighlight %}
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_5_1.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_5_1.png)
 
 
 The plot is a bit clearer but not perfect, let's try and be more fancy and reprensent the error with error bars like they do in stats 101.
@@ -120,7 +120,7 @@ plt.ylabel("Resistance (kohm)")
 {% endhighlight %}
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_7_1.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_7_1.png)
 
 
 Great!  A bit better, but it is still hard to read.  Let's try plotting the error on the same axis as the expected (normal) resistance.
@@ -140,7 +140,7 @@ plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_9_1.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_9_1.png)
 
 
 From this figure it is quite clear as tempertature decreases, there is more error in the thermistor reading.  This figure also shows that reading taken over 20 C should have good accuracy.  We can even take this futher by one more plot
@@ -157,7 +157,7 @@ plt.legend(bbox_to_anchor=(0., 1.02, 1., .102), loc=3,
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_12_1.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_12_1.png)
 
 
 This figure shows the upper and lower bound of error (to be around $$\pm 1.5k\Omega$$)+ 125 kohm, since the expected reading would be around $$125kOmega$$ at 20 degrees C.  Knowing the smallest resistance within our operating range will occur at 100 degrees (around $$6720\Omega$$), R_1 can be calculated to be around $$1200\Omega$$ using the voltage divider presented in the previous post.  Now, the largest possible error can be calculated and used as a very conservative estime of the temperature reading resolution.  Before we do that, let us fit a curve to the data.  Using grade 11 math, we can estimate that the function which discribes the invest curve would look something like $$resistance = a \times e^{-b \times temprature} + c$$.  We can then use SciPy's [curve_fit](http://docs.scipy.org/doc/scipy-0.16.0/reference/generated/scipy.optimize.curve_fit.html) to determine the fit parameters and the covarience matrix.
@@ -213,15 +213,15 @@ plt.plot(x2,mlab.normpdf(x2,full_temp_fit_parms[2],sigma[2]), label='uncertainty
 {% endhighlight %}
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_16_1.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_16_1.png)
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_16_2.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_16_2.png)
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_16_3.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_16_3.png)
 
 
 As we can see, the standard deviation is very small and thus results in a good fit accross the full range of temperature as shown in the three figures below:
@@ -261,15 +261,15 @@ plt.title("Residual Distribution")
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_18_1.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_18_1.png)
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_18_2.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_18_2.png)
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_18_3.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_18_3.png)
 
 
 While the model accross the full temperature is useful, we can improve our model by curve fitting only in the temperature range we are interested in.  This prevents the algorithm for compesating for select set of data which is irrevant.
@@ -328,15 +328,15 @@ plt.title("Residual Distribution")
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_20_2.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_20_2.png)
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_20_3.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_20_3.png)
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_20_4.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_20_4.png)
 
 
 We can see the difference by comparing both of the curve fit models on the interested temperature range:
@@ -407,15 +407,15 @@ l = P.plot(bins, y, 'k--', linewidth=1.5)
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_23_1.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_23_1.png)
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_23_2.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_23_2.png)
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_23_3.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_23_3.png)
 
 
 The results of the curve fit within the standard operating temperature is much better.  Now only is residual error mean essentually zero (9.99e-10 k ohm) with a relatively small standard deviation (0.230 kohm), but the residual error have the general appearance of being normally distributed (unlike the previous curve fits).  What this means is that, the model will predict the resistance very well (have a very low error) for the stardard operating temperatures, but will perform poorer outside.  Luckly for us, our battries will not be operating below 20 degrees C or above 80 degrees C.

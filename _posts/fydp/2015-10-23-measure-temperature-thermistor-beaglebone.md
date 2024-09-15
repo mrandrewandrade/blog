@@ -10,7 +10,7 @@ last_updated: 2015-10-24
 
 # Results from Modeling a Thermister
 
-In the [last blog post](http://mrandrewandrade.com/blog/2015/10/22/modeling-thermistor-using-data-science.html), I described a long winded approach about how I built a model for a thermister to relate the voltage measured from a BeagleBoneBlack (BBB) microcontroller to the temperature.  This post will summarize the results from the model, and explain how to connect up the system.
+In the [last blog post](https://andrewandrade.ca/blog/2015/10/22/modeling-thermistor-using-data-science.html), I described a long winded approach about how I built a model for a thermister to relate the voltage measured from a BeagleBoneBlack (BBB) microcontroller to the temperature.  This post will summarize the results from the model, and explain how to connect up the system.
 
 
 ## Thermal Sensor Data
@@ -24,7 +24,7 @@ The thermal sensor used is a 100k thermistor [Part No. HT100K3950-1](http://www.
 PTFE Tube 0.6*1mm to protect from the thermistor     
 Shrink wrap between thermistor and the cables.    
 
-The site included a weird [word document](http://www.robotdigg.com/upload/pdf/100k-thermistor.doc) with a bunch of numbers.  I saved the data as a [.csv](http://mrandrewandrade.com/datasets/100k-thermistor.csv) file so I can use the data in python.  If you want to follow along, you can you download the document [here](http://mrandrewandrade.com/datasets/100k-thermistor.csv)    
+The site included a weird [word document](http://www.robotdigg.com/upload/pdf/100k-thermistor.doc) with a bunch of numbers.  I saved the data as a [.csv](https://andrewandrade.ca/datasets/100k-thermistor.csv) file so I can use the data in python.  If you want to follow along, you can you download the document [here](https://andrewandrade.ca/datasets/100k-thermistor.csv)    
 
 I then made a chart which includes the expected resistance and the errors.  This chart summarizes the data provided by the manufacturer:
   
@@ -251,15 +251,15 @@ l = P.plot(bins, y, 'k--', linewidth=1.5)
     0.264370345418
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_23_1.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_23_1.png)
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_23_2.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_23_2.png)
 
 
 
-![png](http://mrandrewandrade.com/blog/images/modeling-thermistor-using-data-science/output_23_3.png)
+![png](https://andrewandrade.ca/blog/images/modeling-thermistor-using-data-science/output_23_3.png)
 
 
 As we can see, the residual error is very small compared to the range of resistance, and follows a (some what) normal distribution.  That we have a model of resistance vs temperature, lets set up our microcontroller (BBB) to measure temperature.  Since our sensor is a variable resistor, we can take an analog mesaurement by passing a current though the thermister and measuring the voltage accross it. Since we need to limit our input voltage to 1.8 V (according to the BBB spec, we can use a voltage divider to limit the maximum voltage accross the thermistor (as shown below)

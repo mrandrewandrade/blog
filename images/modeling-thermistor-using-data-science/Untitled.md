@@ -27,7 +27,7 @@ The most important piece of information to get started using the thermister is i
 
 
 ## Mapping Resistance to Temperature using Curve Fitting 
-The site included a weird [word document](http://www.robotdigg.com/upload/pdf/100k-thermistor.doc) with a bunch of numbers.  It really confuses me why one would have tabular data in a word document, a spreadsheet serves that purpose.  Anyways, the information was easily extractable and I was able to put it into an spreadsheet and save as a .CSV file.  If you want to follow along, you can you download the document [here](http://mrandrewandrade.com/datasets/100k-thermistor.csv)
+The site included a weird [word document](http://www.robotdigg.com/upload/pdf/100k-thermistor.doc) with a bunch of numbers.  It really confuses me why one would have tabular data in a word document, a spreadsheet serves that purpose.  Anyways, the information was easily extractable and I was able to put it into an spreadsheet and save as a .CSV file.  If you want to follow along, you can you download the document [here](https://andrewandrade.ca/datasets/100k-thermistor.csv)
 
 Once you own the file in a speadsheet program or in your text editor of choice, you can see there are four columns: temperature in Celcius, maximum resistance in $$k\Omega$$,  normal (average)resistance in $$k\Omega$$ and  minimum resistance in $$k\Omega$$ .  If we were measuring the resistance by hand, we could simply just look up (and eyeball) the closest resistance value and read of the temperature.  We could be more fancy and use [linear interpolation](https://en.wikipedia.org/wiki/Linear_interpolation) as an alternative to eyeballing.
 
