@@ -2,7 +2,7 @@
 layout: post
 title: "Remebering"
 tagline: "First hand experience building PetroPredict's team"
-description: "Growing and Scaling high performance teams"
+description: "Port Credit Boys"
 category: [Leadership, Start-ups, Cross-posts] 
 tags: [Leadership, Udacity, Start-ups, eCo-op, Productivity]
 last_updated: 2015-10-24
