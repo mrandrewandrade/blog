@@ -1,63 +1,91 @@
 ---
 layout: post
-title: "Remebering"
-tagline: "First hand experience building PetroPredict's team"
-description: "Growing and Scaling high performance teams"
-category: [Leadership, Start-ups, Cross-posts] 
-tags: [Leadership, Udacity, Start-ups, eCo-op, Productivity]
-last_updated: 2015-10-24
+title: "Reviving the Blog — Lessons From a Bugle, a Flag, and a Forgotten Story"
+tagline: "Remembering through music, history, and the traces we carry forward"
+description: "Reflections on Remembrance Day, cadets, teaching, and the story of George Cardozo"
+category: [Reflection, Teaching, Community]
+tags: [Remembrance Day, History, Cadets, Teaching, Robotics, Music]
+last_updated: 2025-11-18
 ---
 
-Hellow world
-This is a cross-post of a blog post originally written for CBET's [Leadership Blog](https://uwaterloo.ca/conrad-business-entrepreneurship-technology/blog/post/scaling-your-startup-team-and-knowledge) during my [enterprise co-op term](https://uwaterloo.ca/conrad-business-entrepreneurship-technology/undergraduate-students/enterprise-co-op) (intern at my own company) in the summer of 2014.  The blog post was also featured on LinkedIn's [Leadership and Management Pulse](https://www.linkedin.com/pulse/20140816182325-143036205-growing-and-scaling-high-performance-teams?trk=prof-post)  
+It’s been years since I last wrote here. I started this blog back in fourth-year engineering while job hunting—before I joined Palantir, before robotics labs and late-night debugging sessions, before teaching, before all the twists that came after.
 
-When I started [PetroPredict](http://petropredict.com) with Dominic, we were just a team of two co-founders looking to use technologies we used in tech companies and Silicon Valley to optimize decision making in the oil and gas industry. Since then we added on 4 others, effectively tripling our team. Over the past couple of months we were able to run a high performance team enabling our company to grow and scale.
+This week, Remembrance Day brought me back.
 
-# New Skillset as a Leader
+I had the honour of playing trumpet with our school band—not the Last Post; I’m still working to be good enough for that—but enough to stand with the group in something meaningful. Instruments in hand, attention quieted, it immediately pulled me back to army cadets: early mornings at the armoury, uniform inspections, and raising the flags with quiet ceremony.
 
-Leading and building high performance teams was new to me, but as any new skill, with effort, it is possible to acquire. The very best thing about being a leader is you can reflect on leadership and management that you have experienced while working in previous roles. By reflecting on the techniques used by your previous managers, you can effectively outline what techniques you would like to use. Over my work terms in highschool co-op, summer jobs and university co-op I had a great opportunity to work in different corporate environment and with many different leaders and mentors. Learning from the past is one of the best ways to optimize the future.
+(Insert photo of raising the flag)
 
-# Startup = Growth
+Those mornings felt routine at the time, but looking back, they shaped discipline in ways I didn’t notice until much later.
 
-> A startup is a company designed to grow fast.” — Paul Graham 
+(Insert second photo raising the flag)
 
-The biggest thing that a startup has is the ability to grow and scale. It is obvious that companies can scale in technology, customers and sales, but almost every aspect of a startup has to scale. A great example of this is when [Chris Cox](http://en.wikipedia.org/wiki/Chris_Cox_(Facebook)) (Chief Product Officer at Facebook) told me about the idea of scaling company culture from a handful of employees to a couple of thousand.
+Back then I never had many badges on my uniform—certainly not compared to the mentors I looked up to.
 
-# Growing Knowledge
+(Insert photo of mentor’s uniform with badges beside your empty sleeves)
 
-One aspect I wanted to elaborate on is growing knowledge. Working at a startup means that you are going to have to take many roles and have a diverse number of skills. The other thing is that the company is moving so fast that you have to gain required skills as soon as possible. When new members come on the team they have to gain certain knowledge before they can contribute. Even if you take an iterative approach, where you learn a little, do a little, it can still be difficult for rapid knowledge acquirement at the speed of the start up.
+Cadets taught me what rank really meant: not the patch, but the work behind it.
 
-# Udacity and MOOCs
+Even now, in robotics labs or in front of a computer screen tracking down a stubborn bug, that lesson sticks.
 
-A great solution to this is by the use of [MOOCs](https://en.wikipedia.org/wiki/Massive_open_online_course) (massively open online courses). We are lucky to be in a time where there is free access to very useful courses. Specifically I found that Udacity was one of the very best ways to allow team members to gain knowledge they needed to suceed.
+(Insert photo of you working with computers)
 
-For example when our highschool summer student, [Kevin Peng](http://www.linkedin.com/pub/kevin-peng/9b/7b3/346), joined the team, he never used `git` or version control before. Instead of having to spend time on reading boring documentation or a [book on git](https://git-scm.com/book/en/v2), he made his own version of 2048 in a couple of hours by taking [Udacity’s course](https://www.udacity.com/course/ud248). This fun iterative approach allowed him to have a great summer co-op experience and enabled to complete a [technically difficult project](https://github.com/kevinpeng7/Data-Dumper).
+I eventually left cadets to focus on violin and robotics at Port Credit Secondary School—but the discipline, the early mornings, and the sense of responsibility stayed. Playing trumpet for Remembrance Day brought all of that back.
 
-# Eating your own dogfood
+And then, thanks to the research done by our Student Activity Council, I learned about George Cardozo—one of the “Port Credit Boys.”
 
-A great philosophy I learnt at Facebook is the idea of "eating your own dog food", or using your own product to validate the quality and capabilities of the product. While we do use data informed decision making techniques in running the company, this also can be applied to being a leader. Being a leader means setting an example to others, so throughout the term, I used Udacity to scale my own knowledge.
+# The Bugler They Didn’t Let Become an Officer
 
-It began by taking Steve Blank’s course on [How to Build a Startup](https://www.udacity.com/course/ep245), and was able to apply the teachings to my own start up. One of the biggest learnings was the idea of minimal viable product and market validation. By taking the advice from the course, we were able to make demos and presentations and found many other applications for our technology which companies are very interested in.
+During preparations for the ceremony, one name surfaced: **Private George Cardozo**, a Jamaican-born teacher educated in Port-au-Prince and Kingston before coming to Canada.
 
-As [Jonathan Estralla](http://ca.linkedin.com/in/jonathanestrella) (our software developer) and I found, Udacity provides many other courses in topics such and data science, web development, and even machine learning. Udacity really helps scale knowledge as every lesson is a very short video (usually less than 5 minute) and has quick quizzes and application based assignments. Sometimes there are only a couple of topics we would need to brush up on, we could just watch specific topics which allowed us to complete the task at hand. Udacity in combination of other online resources enables our team to gain the required skills to be successful.
-Running Mean, Lean and Agile
+He enlisted with the 4th Battalion, Canadian Expeditionary Force, on 22 September 1914—one of the very first recruits at Valcartier. His attestation form described him plainly:
 
-Running lean and agile as now become colloquial in software development and startups and is fundamental to running high performance teams. The biggest idea behind these techniques is another Facebook philosophy: **focus on impact**. Understanding what is the most important and valuable thing at the moment and executing as quick as you can. Here are some techniques I found to be useful for running high performing teams by running lean and Agile:
+- Five foot five  
+- Dark complexion  
+- “Coloured”  
+- Roman Catholic  
+- Teacher  
 
-**Beginning of term goal setting** – Get team members to set goals in the beginning of the term, and help motivate them to achieve their goals
+(Insert his attestation form)
 
-**Weekly reports** – At the end of the week do a quick summary of what was worked on during the week and set goals for the next week.
+Despite his education and experience, he wasn’t given the officer’s position he would normally have earned. Because of his colour, he was assigned the lowest role: **bugler**.
 
-**Weekly meetings** – At the beginning of the week, summarize what went on last week and the high level goals for this week. This is also a great opportunity to talk about company news
+(Insert photo of him with the bugle)
 
-**Daily goals** – Daily scrum meetings or stand ups can be used effectively to get to low level goal setting. It also provides an opportunity for members talk about issues or roadblocks they are facing or opportunities for collaboration.
+Today, a bugler is mostly ceremonial. Back then, it meant waking before everyone else, playing Reveille in cold, mud, and rain, rousing officers, and completing morning chores no one else wanted.
 
-**[Asana](http://asana.com)** – Asana is a great product management and collaboration tool. It works great as our team works remotely
+Through all of this, George carried his weight as a soldier. He trained at Ravina Barracks, sailed on the SS *Tyrolia* to England, and was sent to the Western Front.
 
-**Company wiki** – Setting up and running a central source of knowledge for the company enables quick collaboration and opportunity for knowledge capture
+(Insert photo of the Port Credit Boys, with him standing left)
 
-# The Most Powerful Technique of All
+He died sometime between April 22–26, 1915, during the Second Battle of Ypres—the first time poison gas was unleashed in the Great War. His body was never recovered. His name is carved on the Menin Gate in Ypres, alongside more than 55,000 others with no known grave.
 
-Finally, the biggest take away from running a startup is learning from the past by getting advice from mentors and experts. Using information from the past to make better decisions is one of the most powerful things anyone can do.
+Every night at 8 p.m., **they still sound the Last Post beneath his name**.
 
-Throughout the term I have been fortunate to get advice from many mentors from the the [University of Waterloo](http://uwaterloo.ca), the [Velocity Program](http://velocity.uwaterloo.ca), the [Conrad Business, Entrepreneurship and Technology Centre](https://uwaterloo.ca/conrad-business-entrepreneurship-technology/), companies out of the [Velocity Garage](http://velocity.uwaterloo.ca/workspaces/velocity-garage/) and many work colleges and friends. While I do not have room here to name everyone, I wanted to thank everyone for their help and support throughout the term!
+# Bugles, Flags, and the Things We Carry Forward
+
+Learning about George changed the way I approached the ceremony this year.
+
+When I picked up my trumpet, I wasn’t just playing notes.  
+I was completing someone’s call that was cut short.  
+Someone who once stood where I now stand—literally, in Port Credit—more than a century ago.
+
+I thought about raising the flags as a cadet: small responsibilities that felt enormous.
+
+I thought about the ranks I wanted but never reached because life pulled me toward music, coding, robotics, and engineering.
+
+I thought about how our paths branch in unexpected ways but still leave traces—discipline, respect, responsibility.
+
+Most of all, I thought about George, a teacher like I am now, who never returned home to teach again.
+
+# We Remember
+
+> “They shall grow not old, as we that are left grow old…”  
+> — *For the Fallen*, Lawrence Binyon
+
+This post is both a return and a reminder—of the past we inherit, the stories we uncover, and the unexpected ways they shape our present.
+
+This Remembrance Day, I played the trumpet for our school.  
+But I also played it for George.
+
+And I’m honoured to remember him here.
