@@ -38,13 +38,13 @@ Music also became part of those mornings, including our national anthem.
 
 Fast-forward to high school robotics, coding, and engineering—different worlds entirely, but the same threads of discipline and responsibility ran through them.
 
-![standing at attention in the band](/workspaces/blog/images/port-credit-boys-george/attention.jpg)
+![standing at attention in the band](/blog/images/port-credit-boys-george/attention.jpg)
 
 I didn’t stay long enough in cadets to stack up badges like the mentors I admired, but the two years I spent there were full. Varied, intense, and formative, but I still loved computers.
 
-![on the computer — arm 1](/workspaces/blog/images/port-credit-boys-george/corp_1.jpg))
+![on the computer — arm 1](/blog/images/port-credit-boys-george/corp_1.jpg))
 
-![on the computer — arm 1](/workspaces/blog/images/port-credit-boys-george/corp_2.jpg))
+![on the computer — arm 1](/blog/images/port-credit-boys-george/corp_2.jpg))
 
 This year, as part of preparing for our ceremony, I learned more than I expected—thanks entirely to the Student Activity Council, who did all the research.  
 That’s where I discovered the story of **George Cardozo**, one of the “Port Credit Boys.”
@@ -57,12 +57,12 @@ He was a Jamaican-born teacher, educated in Port-au-Prince and Kingston, who cam
 
 One of the first recruits at Valcartier.
 
-![George Standing](/workspaces/blog/images/port-credit-boys-george/standing.jpg))
+![George Standing](/blog/images/port-credit-boys-george/standing.jpg))
 
 
 His attestation paper described him bluntly:
 
-![George's attestation paper](/workspaces/blog/images/port-credit-boys-george/attestation.jpg))
+![George's attestation paper](/blog/images/port-credit-boys-george/attestation.jpg))
 
 
 - Five foot five  
@@ -76,14 +76,14 @@ But because of his colour, he wasn’t given that chance.
 
 Instead, they made him a **bugler**.
 
-![George Sitting](/workspaces/blog/images/port-credit-boys-george/sitting.jpg))
+![George Sitting](/blog/images/port-credit-boys-george/sitting.jpg))
 
 Today, the role is ceremonial.  
 Back then, buglers woke before everyone else, played Reveille in the cold, roused officers, and handled the morning chores no one else wanted.
 
 George still trained hard—at Ravina Barracks, on the SS *Tyrolia* to England, and finally to the Western Front.
 
-![Port Credit Boys](/workspaces/blog/images/port-credit-boys-george/pc_boys.jpg))
+![Port Credit Boys](/blog/images/port-credit-boys-george/pc_boys.jpg))
 
 He died sometime between April 22–26, 1915, during the Second Battle of Ypres—the first time poison gas was used in the Great War. His body was never found.  
 His name is carved on the Menin Gate Memorial in Belgium with over 55,000 others who have no known grave.
