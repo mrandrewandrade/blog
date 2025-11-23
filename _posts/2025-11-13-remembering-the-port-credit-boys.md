@@ -1,4 +1,4 @@
-]---
+---
 layout: post
 title: "Reviving the Blog — Lessons From a Bugle, a Flag, and a Forgotten Story"
 tagline: "Remembering through music, history, and the traces we carry forward"
