@@ -55,8 +55,10 @@ George’s story starts decades before mine, but strangely close to home.
 
 He was a Jamaican-born teacher, educated in Port-au-Prince and Kingston, who came to Canada and enlisted with the 4th Battalion, Canadian Expeditionary Force, on 22 September 1914.
 
-
 One of the first recruits at Valcartier.
+
+![George Standing](/workspaces/blog/images/port-credit-boys-george/standing.jpg))
+
 
 His attestation paper described him bluntly:
 
