@@ -62,7 +62,7 @@ One of the first recruits at Valcartier.
 
 His attestation paper described him bluntly:
 
-![George's attestation paper](/blog/images/port-credit-boys-george/attestation.jpg))
+![George's attestation paper](/blog/images/port-credit-boys-george/attestation.jpg)
 
 
 - Five foot five  
