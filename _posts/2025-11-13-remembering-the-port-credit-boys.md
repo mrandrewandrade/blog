@@ -1,4 +1,4 @@
----
+]---
 layout: post
 title: "Reviving the Blog — Lessons From a Bugle, a Flag, and a Forgotten Story"
 tagline: "Remembering through music, history, and the traces we carry forward"
@@ -12,33 +12,56 @@ It’s been years since I last wrote here. I started this blog back in fourth-ye
 
 This week, Remembrance Day brought me back.
 
-I had the honour of playing trumpet with our school band—not the Last Post; I’m still working to be good enough for that—but enough to stand with the group in something meaningful. Instruments in hand, attention quieted, it immediately pulled me back to army cadets: early mornings at the armoury, uniform inspections, and raising the flags with quiet ceremony.
+I had the honour of playing trumpet with our school band—not the Last Post; I’m still working to be good enough for that—but enough to stand with the group in something meaningful. Instruments in hand, everything paused for a moment, and it pulled me right back to my time in army cadets.
 
-(Insert photo of raising the flag)
+![recruit cadet, sloppy uniform, looking lost](/blog/images/port-credit-boys-george/recruit.jpg)
 
-Those mornings felt routine at the time, but looking back, they shaped discipline in ways I didn’t notice until much later.
+Even now, that first year is burned into my memory—awkward uniform, barely any badges, trying to figure out what leadership meant.  Luckily we had mentors to guide us!
 
-(Insert second photo raising the flag)
+![mentors have badges, we have empty sleeves with no badges](/blog/images/port-credit-boys-george/mentors.jpg)
 
-Back then I never had many badges on my uniform—certainly not compared to the mentors I looked up to.
+Cadets taught me that rank wasn’t the patch; it was the work behind it.
 
-(Insert photo of mentor’s uniform with badges beside your empty sleeves)
+As we approached Remembrance Day this year, I found myself thinking about the small rituals that shaped me. Raising the flag was one of them.
 
-Cadets taught me what rank really meant: not the patch, but the work behind it.
+![standing by the flagpole — photo 1](/blog/images/port-credit-boys-george/raise_1.jpg))
+![standing by the flagpole — photo 2](/blog/images/port-credit-boys-george/raise_2.jpg)  
+![standing by the flagpole — photo 3](/blog/images/port-credit-boys-george/raise_3.jpg)
 
-Even now, in robotics labs or in front of a computer screen tracking down a stubborn bug, that lesson sticks.
+Sometimes it was early, cold, or rushed—but it mattered. And I wasn’t alone.
 
-(Insert photo of you working with computers)
+![standing with friends, guilty smile, preparing flags](/blog/images/port-credit-boys-george/friends.jpg)
 
-I eventually left cadets to focus on violin and robotics at Port Credit Secondary School—but the discipline, the early mornings, and the sense of responsibility stayed. Playing trumpet for Remembrance Day brought all of that back.
+Music also became part of those mornings, including our national anthem.
 
-And then, thanks to the research done by our Student Activity Council, I learned about George Cardozo—one of the “Port Credit Boys.”
+![Insert photo: playing trumpet as a private](/blog/images/port-credit-boys-george/playing_trumpet.jpg)
+
+Fast-forward to high school robotics, coding, and engineering—different worlds entirely, but the same threads of discipline and responsibility ran through them.
+
+![standing at attention in the band](/workspaces/blog/images/port-credit-boys-george/attention.jpg)
+
+I didn’t stay long enough in cadets to stack up badges like the mentors I admired, but the two years I spent there were full. Varied, intense, and formative, but I still loved computers.
+
+![on the computer — arm 1](/workspaces/blog/images/port-credit-boys-george/corp_1.jpg))
+
+![on the computer — arm 1](/workspaces/blog/images/port-credit-boys-george/corp_2.jpg))
+
+This year, as part of preparing for our ceremony, I learned more than I expected—thanks entirely to the Student Activity Council, who did all the research.  
+That’s where I discovered the story of **George Cardozo**, one of the “Port Credit Boys.”
 
 # The Bugler They Didn’t Let Become an Officer
 
-During preparations for the ceremony, one name surfaced: **Private George Cardozo**, a Jamaican-born teacher educated in Port-au-Prince and Kingston before coming to Canada.
+George’s story starts decades before mine, but strangely close to home.
 
-He enlisted with the 4th Battalion, Canadian Expeditionary Force, on 22 September 1914—one of the very first recruits at Valcartier. His attestation form described him plainly:
+He was a Jamaican-born teacher, educated in Port-au-Prince and Kingston, who came to Canada and enlisted with the 4th Battalion, Canadian Expeditionary Force, on 22 September 1914.
+
+
+One of the first recruits at Valcartier.
+
+His attestation paper described him bluntly:
+
+![George's attestation paper](/workspaces/blog/images/port-credit-boys-george/attestation.jpg))
+
 
 - Five foot five  
 - Dark complexion  
@@ -46,37 +69,40 @@ He enlisted with the 4th Battalion, Canadian Expeditionary Force, on 22 Septembe
 - Roman Catholic  
 - Teacher  
 
-(Insert his attestation form)
+With his education and background, he should have been an officer.  
+But because of his colour, he wasn’t given that chance.
 
-Despite his education and experience, he wasn’t given the officer’s position he would normally have earned. Because of his colour, he was assigned the lowest role: **bugler**.
+Instead, they made him a **bugler**.
 
-(Insert photo of him with the bugle)
+![George Sitting](/workspaces/blog/images/port-credit-boys-george/sitting.jpg))
 
-Today, a bugler is mostly ceremonial. Back then, it meant waking before everyone else, playing Reveille in cold, mud, and rain, rousing officers, and completing morning chores no one else wanted.
+Today, the role is ceremonial.  
+Back then, buglers woke before everyone else, played Reveille in the cold, roused officers, and handled the morning chores no one else wanted.
 
-Through all of this, George carried his weight as a soldier. He trained at Ravina Barracks, sailed on the SS *Tyrolia* to England, and was sent to the Western Front.
+George still trained hard—at Ravina Barracks, on the SS *Tyrolia* to England, and finally to the Western Front.
 
-(Insert photo of the Port Credit Boys, with him standing left)
+![Port Credit Boys](/workspaces/blog/images/port-credit-boys-george/pc_boys.jpg))
 
-He died sometime between April 22–26, 1915, during the Second Battle of Ypres—the first time poison gas was unleashed in the Great War. His body was never recovered. His name is carved on the Menin Gate in Ypres, alongside more than 55,000 others with no known grave.
+He died sometime between April 22–26, 1915, during the Second Battle of Ypres—the first time poison gas was used in the Great War. His body was never found.  
+His name is carved on the Menin Gate Memorial in Belgium with over 55,000 others who have no known grave.
 
-Every night at 8 p.m., **they still sound the Last Post beneath his name**.
+Every evening at 8 p.m., beneath his name, **they still sound the Last Post**.
 
 # Bugles, Flags, and the Things We Carry Forward
 
-Learning about George changed the way I approached the ceremony this year.
+This year, when I picked up my trumpet, I wasn’t playing the Last Post—but I was playing with a different awareness.
 
-When I picked up my trumpet, I wasn’t just playing notes.  
-I was completing someone’s call that was cut short.  
-Someone who once stood where I now stand—literally, in Port Credit—more than a century ago.
+I thought about the flags I used to raise.
 
-I thought about raising the flags as a cadet: small responsibilities that felt enormous.
+The badges I didn’t earn.  
 
-I thought about the ranks I wanted but never reached because life pulled me toward music, coding, robotics, and engineering.
+The ones my mentors did, and those who serve did.
 
-I thought about how our paths branch in unexpected ways but still leave traces—discipline, respect, responsibility.
+The path that took me into engineering and teaching instead.  
 
-Most of all, I thought about George, a teacher like I am now, who never returned home to teach again.
+And how all of those threads weave into who I am now.
+
+I thought about George, a teacher/learning like me, who never came back to teach/learn again.
 
 # We Remember
 
