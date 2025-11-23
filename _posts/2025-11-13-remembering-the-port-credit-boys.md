@@ -60,11 +60,11 @@ One of the first recruits at Valcartier.
 ![George Standing](/blog/images/port-credit-boys-george/standing.jpg))
 
 
-His attestation paper described him bluntly:
+His attestation paper recorded only the essentials: his trade or calling, his date of birth, and his place of birth. Beyond those brief entries, the rest of George’s life, identity, and service must be reconstructed through the surviving evidence gathered from archival and family research. A fuller picture — his experiences as a Jamaican-born bugler, his movement through the Canadian Expeditionary Force, and the context surrounding his enlistment — comes from the sources compiled in the project’s research. These include **My Jamaican Family**’s biography [*They Shall Grow Not Old – George Cardozo, a Casualty of …*](https://myjamaicanfamily.blogspot.com/2014/11/rembering-george-cardozo-1890-1915.html) and [*Remembering George Cardozo, 1890–1915*](https://myjamaicanfamily.blogspot.com/2014/11/rembering-george-cardozo-1890-1915.html), the **Canadian Virtual War Memorial** entry for [*George Cordozo*](https://www.veterans.gc.ca/en/remembrance/memorials/canadian-virtual-war-memorial/detail/922681) from **Veterans Affairs Canada**, and his digitized service file in **Library and Archives Canada**’s [*Personnel Records of the First World War*](https://www.canada.ca/en/library-archives/collection/research-help/military-history/first-world-war/fww-personnel.html?wbdisable=true&utm_source=chatgpt.com). Together, these sources allow us to understand George far more deeply than the minimal information captured on the photo.
 
 ![George's attestation paper](/blog/images/port-credit-boys-george/attestation.jpg)
 
-
+According to Dorothy Kew from the  My Jamaican Family Blog, he was:
 - Five foot five  
 - Dark complexion  
 - “Coloured”  
