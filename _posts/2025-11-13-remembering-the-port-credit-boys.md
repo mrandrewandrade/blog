@@ -24,7 +24,7 @@ Cadets taught me that rank wasn’t the patch; it was the work behind it.
 
 As we approached Remembrance Day this year, I found myself thinking about the small rituals that shaped me. Raising the flag was one of them.
 
-![standing by the flagpole — photo 1](/blog/images/port-credit-boys-george/raise_1.jpg))
+![standing by the flagpole — photo 1](/blog/images/port-credit-boys-george/raise_1.jpg)
 ![standing by the flagpole — photo 2](/blog/images/port-credit-boys-george/raise_2.jpg)  
 ![standing by the flagpole — photo 3](/blog/images/port-credit-boys-george/raise_3.jpg)
 
@@ -42,9 +42,9 @@ Fast-forward to high school robotics, coding, and engineering—different worlds
 
 I didn’t stay long enough in cadets to stack up badges like the mentors I admired, but the two years I spent there were full. Varied, intense, and formative, but I still loved computers.
 
-![on the computer — arm 1](/blog/images/port-credit-boys-george/corp_1.jpg))
+![on the computer — arm 1](/blog/images/port-credit-boys-george/corp_1.jpg)
 
-![on the computer — arm 1](/blog/images/port-credit-boys-george/corp_2.jpg))
+![on the computer — arm 1](/blog/images/port-credit-boys-george/corp_2.jpg)
 
 This year, as part of preparing for our ceremony, I learned more than I expected—thanks entirely to the Student Activity Council, who did all the research.  
 That’s where I discovered the story of **George Cardozo**, one of the “Port Credit Boys.”
@@ -88,23 +88,26 @@ George still trained hard—at Ravina Barracks, on the SS *Tyrolia* to England, 
 He died sometime between April 22–26, 1915, during the Second Battle of Ypres—the first time poison gas was used in the Great War. His body was never found.  
 His name is carved on the Menin Gate Memorial in Belgium with over 55,000 others who have no known grave.
 
+![Grave](/blog/images/port-credit-boys-george/george_grave.jpg)
+
 Every evening at 8 p.m., beneath his name, **they still sound the Last Post**.
 
 # Bugles, Flags, and the Things We Carry Forward
 
-This year, when I picked up my trumpet, I wasn’t playing the Last Post—but I was playing with a different awareness.
+This year I raised my trumpet high,
+Not for the Last Post’s mournful cry,
+But with a deeper, steadier sight
+Of all the threads that shaped my flight.
 
-I thought about the flags I used to raise.
+I thought of flags I used to raise,
+The badges missed in younger days,
+The mentors’ paths I didn’t tread,
+And those who served and marched instead.
 
-The badges I didn’t earn.  
-
-The ones my mentors did, and those who serve did.
-
-The path that took me into engineering and teaching instead.  
-
-And how all of those threads weave into who I am now.
-
-I thought about George, a teacher/learning like me, who never came back to teach/learn again.
+I thought of George—so much like me—
+A teacher-learner meant to be,
+Who left to fight through smoke and flame
+And never made it home again.
 
 # We Remember
 
