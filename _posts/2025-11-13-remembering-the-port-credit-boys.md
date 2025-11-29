@@ -76,38 +76,50 @@ But because of his colour, he wasn’t given that chance.
 
 Instead, they made him a **bugler**.
 
-![George Sitting](/blog/images/port-credit-boys-george/sitting.jpg))
+![George Sitting](/blog/images/port-credit-boys-george/sitting.jpg)
 
 Today, the role is ceremonial.  
 Back then, buglers woke before everyone else, played Reveille in the cold, roused officers, and handled the morning chores no one else wanted.
 
 George still trained hard—at Ravina Barracks, on the SS *Tyrolia* to England, and finally to the Western Front.
 
-![Port Credit Boys](/blog/images/port-credit-boys-george/pc_boys.jpg))
+![Port Credit Boys](/blog/images/port-credit-boys-george/pc_boys.jpg)
 
 He died sometime between April 22–26, 1915, during the Second Battle of Ypres—the first time poison gas was used in the Great War. His body was never found.  
 His name is carved on the Menin Gate Memorial in Belgium with over 55,000 others who have no known grave.
 
-![Grave](/blog/images/port-credit-boys-george/george_grave.jpg)
+![Grave](/blog/images/port-credit-boys-george/grave_george.jpg)
 
 Every evening at 8 p.m., beneath his name, **they still sound the Last Post**.
 
 # Bugles, Flags, and the Things We Carry Forward
 
 This year I raised my trumpet high,
+
 Not for the Last Post’s mournful cry,
+
 But with a deeper, steadier sight
+
 Of all the threads that shaped my flight.
 
+
 I thought of flags I used to raise,
+
 The badges missed in younger days,
+
 The mentors’ paths I didn’t tread,
+
 And those who served and marched instead.
 
+
 I thought of George—so much like me—
+
 A teacher-learner meant to be,
+
 Who left to fight through smoke and flame
+
 And never made it home again.
+
 
 # We Remember
 
